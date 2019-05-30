@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "682106396277",
+    "firebase_url": "https://ordernow-d9d44.firebaseio.com",
+    "project_id": "ordernow-d9d44",
+    "storage_bucket": "ordernow-d9d44.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682106396277:android:d8403c1e35319b5f",
+        "android_client_info": {
+          "package_name": "com.example.ordernow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "682106396277-rc1ta7p4iet0gtltpg51u02of1najf1s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.odernow",
+            "certificate_hash": "2074e5953afc6d3e1b3fbe1153245fbe4c2d0839"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMVZj6Dv2so64UQC0If8glFW1lwTcVMf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "682106396277-h0400en1g0posc14r24kh1jkq2gk8g4a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
