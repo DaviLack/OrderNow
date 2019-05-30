@@ -1,2 +1,0 @@
-# OrderNow
-Projeto TCC
