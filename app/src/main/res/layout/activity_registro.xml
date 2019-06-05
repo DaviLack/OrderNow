@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="?attr/colorPrimary"
+    android:background="@drawable/registro"
+
     tools:context=".Usuarios.Registro">
 
     <ProgressBar
@@ -42,10 +43,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.31"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.500"
+        app:layout_constraintVertical_bias="0.544"
         tools:ignore="RtlSymmetry" />
 
     <EditText
@@ -64,46 +65,60 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.31"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.430"
+        app:layout_constraintVertical_bias="0.465"
         tools:ignore="RtlSymmetry" />
 
     <Button
         android:id="@+id/btnsignup"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
+        android:layout_width="78dp"
+        android:layout_height="69dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/button_design"
-        android:text="Registrar"
-        android:textColor="#fff"
         android:fontFamily="sans-serif-black"
+        android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.67" />
+        app:layout_constraintVertical_bias="0.813" />
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="206dp"
-        android:layout_height="178dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.014"
-        app:srcCompat="@drawable/logo" />
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:background="@drawable/email_design"
+        android:ems="10"
+        android:hint="Nome de usuário"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="271dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+        android:text="Já tenho uma conta"
+        android:textColor="#000"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="622dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="281dp"
+        android:layout_height="33dp"
+        android:text="Ler Termos de Serviço"
+
+        android:textColor="#000"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="490dp" />
 
 
 </android.support.constraint.ConstraintLayout>

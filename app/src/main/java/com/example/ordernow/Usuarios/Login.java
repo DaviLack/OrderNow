@@ -22,12 +22,12 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Login extends AppCompatActivity {
 
     Button userLogin;
-    Toolbar toolbar;
     ProgressBar progressBar;
     EditText userEmail;
     EditText userPass;
+    TextView Regtxt;
     TextView EsquePass;
-    Typeface Myfont;
+    Typeface tf1, tf2;
 
 
     FirebaseAuth firebaseAuth;
@@ -40,11 +40,19 @@ public class Login extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progressBar);
         userEmail = findViewById(R.id.etUserEmail);
+        Regtxt = findViewById(R.id.Regtxt);
         userPass = findViewById(R.id.etUserPass);
         userLogin = findViewById(R.id.userLogin);
         EsquePass = findViewById(R.id.EsquePass);
-        Myfont = Typeface.createFromAsset(this.getAssets(), "fonts/Lena.ttf");
-        EsquePass.setTypeface(Myfont);
+
+
+        tf1 = Typeface.createFromAsset(getAssets(), "Lena.ttf");
+        tf2 = Typeface.createFromAsset(getAssets(), "Scaramella-Regular.otf");
+
+
+        EsquePass.setTypeface(tf1);
+        Regtxt.setTypeface(tf1);
+
 
 
         firebaseAuth = firebaseAuth.getInstance();

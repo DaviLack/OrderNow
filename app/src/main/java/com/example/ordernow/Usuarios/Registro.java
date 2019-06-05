@@ -1,6 +1,7 @@
 package com.example.ordernow.Usuarios;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -27,6 +28,7 @@ public class Registro extends AppCompatActivity {
     EditText password;
     Button signup;
     Button login;
+    Typeface tf1, tf2;
 
     FirebaseAuth firebaseAuth;
 
@@ -43,6 +45,9 @@ public class Registro extends AppCompatActivity {
         email = findViewById(R.id.etEmail);
         password = findViewById(R.id.etPassword);
         signup = findViewById(R.id.btnsignup);
+
+        tf1 = Typeface.createFromAsset(getAssets(), "Lena.ttf");
+        tf2 = Typeface.createFromAsset(getAssets(), "Scaramella-Regular.otf");
 
         firebaseAuth = firebaseAuth.getInstance();
 

@@ -4,7 +4,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-android:background="@drawable/Login"
+android:background="@drawable/login"
 tools:context=".Usuarios.Login">
 
     <ProgressBar
@@ -27,8 +27,8 @@ tools:context=".Usuarios.Login">
 
     <Button
         android:id="@+id/userLogin"
-        android:layout_width="72dp"
-        android:layout_height="60dp"
+        android:layout_width="73dp"
+        android:layout_height="68dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -90,7 +90,7 @@ tools:context=".Usuarios.Login">
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Regtxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -121,7 +121,6 @@ tools:context=".Usuarios.Login">
         android:textSize="19sp"
         app:layout_constraintBottom_toTopOf="@+id/userLogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etUserPass"
         app:layout_constraintVertical_bias="0.0" />
