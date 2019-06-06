@@ -84,41 +84,65 @@
         android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.813" />
+        app:layout_constraintVertical_bias="0.82" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="250dp"
         android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/email_design"
         android:ems="10"
         android:hint="Nome de usuário"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="271dp" />
+        android:paddingStart="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/etPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.939" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="187dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="Já tenho uma conta"
         android:textColor="#000"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="116dp"
-        tools:layout_editor_absoluteY="622dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnsignup"
+        app:layout_constraintVertical_bias="0.377" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="281dp"
+        android:layout_width="wrap_content"
         android:layout_height="33dp"
-        android:text="Ler Termos de Serviço"
+        android:layout_marginStart="8dp"
 
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Ler Termos de Serviço"
         android:textColor="#000"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="94dp"
-        tools:layout_editor_absoluteY="490dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnsignup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981" />
 
 
 </android.support.constraint.ConstraintLayout>
