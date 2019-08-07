@@ -13,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.ordernow.Activitys.MainActivity;
+import com.example.ordernow.Activitys.Welcome;
 import com.example.ordernow.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -27,7 +28,7 @@ public class Login extends AppCompatActivity {
     EditText userPass;
     TextView Regtxt;
     TextView EsquePass;
-    Typeface tf1, tf2;
+    Typeface tf1, tf2, tf3;
 
 
     FirebaseAuth firebaseAuth;
@@ -46,12 +47,17 @@ public class Login extends AppCompatActivity {
         EsquePass = findViewById(R.id.EsquePass);
 
 
+
         tf1 = Typeface.createFromAsset(getAssets(), "Lena.ttf");
-        tf2 = Typeface.createFromAsset(getAssets(), "Scaramella-Regular.otf");
+        tf2 = Typeface.createFromAsset(getAssets(), "pala.ttf");
+        tf3 = Typeface.createFromAsset(getAssets(), "Scaramella-Regular.otf");
 
 
         EsquePass.setTypeface(tf1);
         Regtxt.setTypeface(tf1);
+        userEmail.setTypeface(tf1);
+        userPass.setTypeface(tf1);
+        userLogin.setTypeface(tf1);
 
 
 
@@ -68,7 +74,7 @@ public class Login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if(task.isSuccessful()){
-                            startActivity(new Intent(Login.this, MainActivity.class));
+                            startActivity(new Intent(Login.this, Welcome.class));
                         }else{
                             Toast.makeText(Login.this, "Senha incorreta",     Toast.LENGTH_LONG).show();
                         }
