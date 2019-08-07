@@ -4,34 +4,8 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-android:background="#ae3e3e"
+android:background="@drawable/login"
 tools:context=".Usuarios.Login">
-
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="637dp"
-        android:layout_height="951dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195"
-        app:srcCompat="@drawable/PERFIL" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="444dp"
-        android:layout_height="655dp"
-        android:layout_marginBottom="46dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.246"
-        app:srcCompat="@drawable/OrderNowL" />
-
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -53,24 +27,21 @@ tools:context=".Usuarios.Login">
 
     <Button
         android:id="@+id/userLogin"
-        android:layout_width="280dp"
-        android:layout_height="51dp"
+        android:layout_width="73dp"
+        android:layout_height="68dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/button_design"
         android:fontFamily="sans-serif-black"
-        android:text="Entrar"
-        android:textColor="#000"
+        android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.745" />
-
-
+        app:layout_constraintVertical_bias="0.78" />
 
 
     <EditText
@@ -92,7 +63,7 @@ tools:context=".Usuarios.Login">
         app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458"
+        app:layout_constraintVertical_bias="0.499"
         tools:ignore="RtlSymmetry" />
 
     <EditText
@@ -114,7 +85,7 @@ tools:context=".Usuarios.Login">
         app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.546"
+        app:layout_constraintVertical_bias="0.591"
         tools:ignore="RtlSymmetry" />
 
 
@@ -123,17 +94,17 @@ tools:context=".Usuarios.Login">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginBottom="8dp"
         android:onClick="text_action"
         android:text="Registre-se aqui"
         android:textColor="#000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toBottomOf="@+id/userLogin"
         app:layout_constraintVertical_bias="0.137" />
 
@@ -141,23 +112,17 @@ tools:context=".Usuarios.Login">
         android:id="@+id/EsquePass"
         android:layout_width="187dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="132dp"
-        android:layout_marginBottom="12dp"
-        android:autoSizeTextType="uniform"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="27dp"
         android:text="Esqueceu sua Senha"
-
         android:textColor="#000"
         android:textSize="19sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/userLogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etUserPass"
         app:layout_constraintVertical_bias="0.0" />
-
-
-
 
 </android.support.constraint.ConstraintLayout>
