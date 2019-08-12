@@ -4,16 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/welcome"
+    android:background="#ae3e3e"
     tools:context=".Activitys.Welcome">
 
+
+    <ImageView
+        android:id="@+id/plateOrder3"
+        android:layout_width="499dp"
+        android:layout_height="790dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/perfil" />
 
     <TextView
         android:id="@+id/txt_bem"
         android:layout_width="255dp"
         android:layout_height="61dp"
-        android:layout_marginStart="85dp"
-        android:layout_marginEnd="82dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="Bem-Vindo"
         android:textColor="#000"
@@ -21,45 +32,45 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_ola"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.487" />
 
     <TextView
         android:id="@+id/txt_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="296dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="User"
         android:textColor="#000"
         android:textSize="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.997" />
+        app:layout_constraintVertical_bias="0.581" />
 
     <TextView
         android:id="@+id/txt_ola"
         android:layout_width="70dp"
         android:layout_height="50dp"
-        android:layout_marginStart="166dp"
-        android:layout_marginTop="255dp"
-        android:layout_marginEnd="167dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="Olá!"
         android:textColor="#000"
         android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.404"
         app:layout_constraintVertical_chainStyle="spread_inside" />
+
+
 </android.support.constraint.ConstraintLayout>

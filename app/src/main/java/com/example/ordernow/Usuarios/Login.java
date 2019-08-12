@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +27,7 @@ public class Login extends AppCompatActivity {
     ProgressBar progressBar;
     EditText userEmail;
     EditText userPass;
+    ImageView plateOrder;
     TextView Regtxt;
     TextView EsquePass;
     Typeface tf1, tf2, tf3;
@@ -45,6 +47,7 @@ public class Login extends AppCompatActivity {
         userPass = findViewById(R.id.etUserPass);
         userLogin = findViewById(R.id.userLogin);
         EsquePass = findViewById(R.id.EsquePass);
+        plateOrder = findViewById(R.id.plateOrder);
 
 
 
@@ -57,7 +60,6 @@ public class Login extends AppCompatActivity {
         Regtxt.setTypeface(tf1);
         userEmail.setTypeface(tf1);
         userPass.setTypeface(tf1);
-        userLogin.setTypeface(tf1);
 
 
 

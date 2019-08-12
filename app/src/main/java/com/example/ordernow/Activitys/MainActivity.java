@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static
     TextView resultTextView;
+    public static int codigo;
     FloatingActionButton scan_btn;
 
 

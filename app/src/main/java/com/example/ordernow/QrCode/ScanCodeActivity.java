@@ -26,6 +26,7 @@ public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerV
     public void handleResult(Result result) {
 
             MainActivity.resultTextView.setText(result.getText());
+            MainActivity.codigo = Integer.parseInt(String.valueOf(MainActivity.resultTextView));
             onBackPressed();
 
     }

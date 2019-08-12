@@ -26,8 +26,10 @@ public class Registro extends AppCompatActivity {
     ProgressBar progressbar;
     EditText email;
     EditText password;
+    EditText Editcell;
+    EditText Edituser;
+    EditText Editddd;
     Button signup;
-    Button login;
     Typeface tf1, tf2;
 
     FirebaseAuth firebaseAuth;
@@ -42,6 +44,9 @@ public class Registro extends AppCompatActivity {
 
 
         progressbar = findViewById(R.id.progressBar);
+        Editddd = findViewById(R.id.Editddd);
+        Edituser = findViewById(R.id.Edituser);
+        Editcell = findViewById(R.id.Editcell);
         email = findViewById(R.id.etEmail);
         password = findViewById(R.id.etPassword);
         signup = findViewById(R.id.btnsignup);
