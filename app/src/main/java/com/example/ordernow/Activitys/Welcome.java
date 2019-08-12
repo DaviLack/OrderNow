@@ -32,7 +32,7 @@ public class Welcome extends AppCompatActivity {
             }
         };
 
-        Timer.schedule(Task, 5000);
+        Timer.schedule(Task, 3000);
 
         txt_bem = findViewById(R.id.txt_bem);
         txt_ola = findViewById(R.id.txt_ola);

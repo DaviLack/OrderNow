@@ -24,9 +24,7 @@ import com.example.ordernow.R;
 public class MainActivity extends AppCompatActivity {
     private int CAMERA_PERMISSION_CODE = 1;
 
-    public static
     TextView resultTextView;
-    public static int codigo;
     FloatingActionButton scan_btn;
 
 

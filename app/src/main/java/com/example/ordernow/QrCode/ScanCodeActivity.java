@@ -1,9 +1,10 @@
 package com.example.ordernow.QrCode;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.ordernow.Activitys.MainActivity;
+import com.example.ordernow.Activitys.Cardapio;
 import com.google.zxing.Result;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
@@ -25,9 +26,8 @@ public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerV
     @Override
     public void handleResult(Result result) {
 
-            MainActivity.resultTextView.setText(result.getText());
-            MainActivity.codigo = Integer.parseInt(String.valueOf(MainActivity.resultTextView));
-            onBackPressed();
+            Cardapio.codigo = Integer.parseInt(String.valueOf(result.getText()));
+            startActivity(new Intent(getApplicationContext(), Cardapio.class));
 
     }
 
