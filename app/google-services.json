@@ -8,19 +8,23 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:682106396277:android:d8403c1e35319b5f",
+        "mobilesdk_app_id": "1:682106396277:android:0d8fca1c9e51bea2",
         "android_client_info": {
           "package_name": "com.example.ordernow"
         }
       },
       "oauth_client": [
         {
-          "client_id": "682106396277-rc1ta7p4iet0gtltpg51u02of1najf1s.apps.googleusercontent.com",
+          "client_id": "682106396277-4g02t2a09jbn4rf76oienqhvr4hrto14.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.odernow",
+            "package_name": "com.example.ordernow",
             "certificate_hash": "2074e5953afc6d3e1b3fbe1153245fbe4c2d0839"
           }
+        },
+        {
+          "client_id": "682106396277-h0400en1g0posc14r24kh1jkq2gk8g4a.apps.googleusercontent.com",
+          "client_type": 3
         }
       ],
       "api_key": [

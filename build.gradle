@@ -9,6 +9,11 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.2'
         classpath 'com.google.gms:google-services:4.2.0'
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 750fe12... Problemas de Manifest resolvidos, mas problema no PostListActivity
 
 
 
