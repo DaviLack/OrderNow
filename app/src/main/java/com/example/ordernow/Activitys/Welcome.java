@@ -47,8 +47,5 @@ public class Welcome extends AppCompatActivity {
         txt_name.setTypeface(tf2);
 
 
-
-
-
     }
 }

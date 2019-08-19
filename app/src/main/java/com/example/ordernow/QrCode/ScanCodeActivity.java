@@ -26,7 +26,6 @@ public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerV
     @Override
     public void handleResult(Result result) {
 
-            Cardapio.codigo = Integer.parseInt(String.valueOf(result.getText()));
             startActivity(new Intent(getApplicationContext(), Cardapio.class));
 
     }

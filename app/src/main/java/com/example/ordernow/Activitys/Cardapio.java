@@ -1,10 +1,12 @@
 package com.example.ordernow.Activitys;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.os.storage.StorageManager;
@@ -13,8 +15,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.ordernow.R;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
@@ -33,6 +39,7 @@ public class Cardapio extends AppCompatActivity {
     private RecyclerView recyclerView;
 
     private ArrayList<Images> imageList;
+    private RecyclerAdapter recyclerAdapter;
 
 
     @Override
@@ -55,6 +62,7 @@ public class Cardapio extends AppCompatActivity {
 
         imageList = new ArrayList<>();
 
+
         init();
 
 
@@ -65,6 +73,37 @@ public class Cardapio extends AppCompatActivity {
 
         clearAll();
 
+        Query query = reference.child("Images");
+
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    Images images = new Images();
+
+                    images.setUrl(snapshot.child("url").getValue().toString());
+                    images.setDescription(snapshot.child("description").getValue().toString());
+                    images.setNome(snapshot.child("nome").getValue().toString());
+                    images.setPreco(snapshot.child("preco").getValue().toString());
+
+                    imageList.add(images);
+
+                }
+
+                recyclerAdapter = new RecyclerAdapter(mContext, imageList);
+                recyclerView.setAdapter(recyclerAdapter);
+                recyclerAdapter.notifyDataSetChanged();
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
 
     }
 
@@ -73,10 +112,22 @@ public class Cardapio extends AppCompatActivity {
         if(imageList != null){
 
             imageList.clear();
+
+            if(recyclerAdapter != null){
+
+                recyclerAdapter.notifyDataSetChanged();
+
+            }
+
         }
 
         imageList = new ArrayList<>();
 
+    }
+
+    public void onBackPressed() {
+        // super.onBackPressed();
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }
 
 }
