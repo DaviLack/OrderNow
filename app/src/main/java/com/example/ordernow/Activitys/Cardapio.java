@@ -11,6 +11,8 @@ import android.nfc.Tag;
 import android.os.Bundle;
 import android.os.storage.StorageManager;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -27,6 +29,9 @@ import com.google.firebase.storage.StorageReference;
 import java.util.ArrayList;
 
 public class Cardapio extends AppCompatActivity {
+
+    ImageButton btn_add;
+
 
     private static final String TAG = "Cardapio";
 
@@ -63,12 +68,10 @@ public class Cardapio extends AppCompatActivity {
 
         imageList = new ArrayList<>();
 
-
         init();
 
 
-
-    }
+     }
 
     private void init(){
 
