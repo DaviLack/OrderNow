@@ -26,6 +26,7 @@ public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerV
     @Override
     public void handleResult(Result result) {
 
+            Cardapio.QrMenu = result.getText();
             startActivity(new Intent(getApplicationContext(), Cardapio.class));
 
     }
