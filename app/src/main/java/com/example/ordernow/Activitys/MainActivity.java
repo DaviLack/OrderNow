@@ -20,7 +20,9 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,13 +30,15 @@ import com.example.ordernow.QrCode.ScanCodeActivity;
 import com.example.ordernow.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
+import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity {
     private int CAMERA_PERMISSION_CODE = 1;
     
     public static TextView ToolbarUser;
-    public static ImageButton profile_image;
+    ImageView profile_image;
     FloatingActionButton scan_btn;
+    Button logout;
 
 
 
@@ -43,11 +47,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        logout = findViewById(R.id.logout);
+        profile_image = findViewById(R.id.profile_image);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Picasso.get().load(Validar.profile_image).into(profile_image);
 
-        scan_btn =  findViewById(R.id.btn_scan);
+
         ToolbarUser = findViewById(R.id.ToolbarUser);
 
         ToolbarUser.setText(Validar.ToolbarUser);
@@ -67,6 +76,14 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+            logout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    FirebaseAuth.getInstance().signOut();
+                    startActivity(new Intent(MainActivity.this, Login.class));
+                    finish();
+                }
+            });
         }
 
      private void requestCameraPermission(){
@@ -105,24 +122,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.logout:
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(MainActivity.this, Login.class));
-                finish();
-                return true;
-        }
-        return false;
-
-    }
 
 
     public void onBackPressed() {

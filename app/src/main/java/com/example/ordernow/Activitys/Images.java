@@ -2,7 +2,7 @@ package com.example.ordernow.Activitys;
 
 public class Images {
 
-    private String description, url, preco, nome;
+    private String description, url, preco, nome, pid;
 
 
     public Images(){
@@ -14,6 +14,7 @@ public class Images {
         this.url = url;
         this.preco = preco;
         this.nome = nome;
+        this.pid = pid;
 
     }
 
@@ -40,4 +41,10 @@ public class Images {
     public String getNome(){return nome;}
 
     public void setNome(String nome){this.nome = nome;}
+
+    public String getPid() {
+        return pid;
+    }
+
+    public void setPid(String pid) {this.pid = pid;}
 }

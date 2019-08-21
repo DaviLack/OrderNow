@@ -1,27 +1,21 @@
 package com.example.ordernow.Activitys;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ordernow.R;
-import com.example.ordernow.Activitys.Cardapio;
-import com.example.ordernow.Activitys.Carrinho;
-import com.example.ordernow.Usuarios.Registro;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-import static androidx.core.content.ContextCompat.startActivity;
+
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
@@ -29,6 +23,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     private Context mContext;
     private ArrayList<Images> imageList;
+    private String productID;
 
 
     public RecyclerAdapter (Context context, ArrayList<Images> imageList){
@@ -48,14 +43,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        productID = imageList.get(position).getPid();
         holder.description.setText(imageList.get(position).getDescription());
         holder.nome.setText(imageList.get(position).getNome());
         holder.preco.setText(imageList.get(position).getPreco());
         
 
-        Picasso.get().load(imageList.get(position).getUrl())
-                .into(holder.imageView);
+        Picasso.get().load(imageList.get(position).getUrl()).into(holder.imageView);
 
     }
 
@@ -70,7 +64,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         TextView description;
         TextView nome;
         TextView preco;
-        ImageView btn_add;
+        ImageView addToCart;
 
 
         public ViewHolder(View itemView){
@@ -81,14 +75,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             description = (TextView) itemView.findViewById(R.id.description);
             nome = (TextView) itemView.findViewById(R.id.nome);
             preco = (TextView) itemView.findViewById(R.id.preco);
-            btn_add = (ImageView) itemView.findViewById(R.id.btn_add);
-            
-            
-            btn_add.setOnClickListener(new View.OnClickListener() {
+            addToCart = (ImageView) itemView.findViewById(R.id.addToCart);
+
+
+            addToCart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent myIntent = new Intent(mContext, Carrinho.class);
-                    mContext.startActivity(myIntent);
+
+
+
                 }
             });
 
@@ -100,7 +95,17 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             
                 
     }
-    
-    
-    
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
