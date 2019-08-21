@@ -57,10 +57,10 @@ tools:context=".Usuarios.Login">
         app:layout_constraintVertical_bias="0.82" />
 
 
-    <EditText
+    <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/etUserEmail"
         android:layout_width="247dp"
-        android:layout_height="32dp"
+        android:layout_height="60dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -79,10 +79,10 @@ tools:context=".Usuarios.Login">
         app:layout_constraintVertical_bias="0.499"
         tools:ignore="RtlSymmetry" />
 
-    <EditText
+    <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/etUserPass"
         android:layout_width="247dp"
-        android:layout_height="32dp"
+        android:layout_height="60dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"

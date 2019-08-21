@@ -2,9 +2,11 @@ package com.example.ordernow.Activitys;
 
 import android.content.Intent;
 import android.graphics.Typeface;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ordernow.R;
 
@@ -13,8 +15,8 @@ import java.util.TimerTask;
 
 public class Welcome extends AppCompatActivity {
 
-
-    TextView txt_ola, txt_bem, txt_name;
+    public static TextView username;
+    TextView txt_ola, txt_bem;
     Typeface tf1, tf2, tf3;
 
 
@@ -36,7 +38,7 @@ public class Welcome extends AppCompatActivity {
 
         txt_bem = findViewById(R.id.txt_bem);
         txt_ola = findViewById(R.id.txt_ola);
-        txt_name = findViewById(R.id.txt_name);
+        username = findViewById(R.id.username);
 
         tf1 = Typeface.createFromAsset(getAssets(), "Lena.ttf");
         tf2 = Typeface.createFromAsset(getAssets(), "pala.ttf");
@@ -44,7 +46,10 @@ public class Welcome extends AppCompatActivity {
 
         txt_bem.setTypeface(tf2);
         txt_ola.setTypeface(tf2);
-        txt_name.setTypeface(tf2);
+        username.setTypeface(tf2);
+
+
+
 
 
     }

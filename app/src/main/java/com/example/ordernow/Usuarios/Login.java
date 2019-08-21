@@ -5,28 +5,27 @@ import android.graphics.Typeface;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.appcompat.widget.Toolbar;
+
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.ordernow.Activitys.Welcome;
 import com.example.ordernow.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.rengwuxian.materialedittext.MaterialEditText;
 
 public class Login extends AppCompatActivity {
 
     Button userLogin;
     ProgressBar progressBar;
-    EditText userEmail;
-    EditText userPass;
+    MaterialEditText userEmail, userPass;
     ImageView plateOrder;
     TextView Regtxt;
     TextView EsquePass;
@@ -67,22 +66,29 @@ public class Login extends AppCompatActivity {
 
 
         userLogin.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
+                String txt_email = userEmail.getText().toString();
+                String txt_password = userPass.getText().toString();
 
-                firebaseAuth.signInWithEmailAndPassword(userEmail.getText().toString(), userPass.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-
-                        if(task.isSuccessful()){
-                            startActivity(new Intent(Login.this, Welcome.class));
-                        }else{
-                            Toast.makeText(Login.this, "Senha incorreta",     Toast.LENGTH_LONG).show();
-                        }
-
-                    }
-                });
+                if(TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password)){
+                    Toast.makeText(Login.this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
+                } else {
+                    firebaseAuth.signInWithEmailAndPassword(txt_email, txt_password)
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if(task.isSuccessful()){
+                                        Intent intent = new Intent(Login.this, Validar.class);
+                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                        startActivity(intent);
+                                        finish();
+                                    } else {
+                                        Toast.makeText(Login.this, "Falha na autenticação", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                }
 
             }
         });

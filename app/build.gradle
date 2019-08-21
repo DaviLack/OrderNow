@@ -45,6 +45,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage:16.0.1'
     implementation 'com.google.firebase:firebase-storage:16.0.1'
 
+
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
     implementation 'me.dm7.barcodescanner:zxing:1.9'
     implementation 'com.google.firebase:firebase-auth:16.2.0'

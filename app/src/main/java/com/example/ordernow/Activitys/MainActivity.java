@@ -6,6 +6,11 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
+
+import com.bumptech.glide.Glide;
+import com.example.ordernow.Usuarios.Login;
+import com.example.ordernow.Usuarios.User;
+import com.example.ordernow.Usuarios.Validar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -15,17 +20,23 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ordernow.QrCode.ScanCodeActivity;
 import com.example.ordernow.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
 
 public class MainActivity extends AppCompatActivity {
     private int CAMERA_PERMISSION_CODE = 1;
-
-    TextView resultTextView;
+    
+    public static TextView ToolbarUser;
+    public static ImageButton profile_image;
     FloatingActionButton scan_btn;
+
+
 
 
     @Override
@@ -35,8 +46,11 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        resultTextView = findViewById(R.id.result_text);
+
         scan_btn =  findViewById(R.id.btn_scan);
+        ToolbarUser = findViewById(R.id.ToolbarUser);
+
+        ToolbarUser.setText(Validar.ToolbarUser);
 
 
             FloatingActionButton btn_scan = findViewById(R.id.btn_scan);
@@ -92,25 +106,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+    public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()){
+            case R.id.logout:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(MainActivity.this, Login.class));
+                finish();
+                return true;
         }
+        return false;
 
-        return super.onOptionsItemSelected(item);
     }
 
 

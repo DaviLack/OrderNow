@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ae3e3e"
-    tools:context=".Activitys.Welcome">
+    tools:context=".Usuarios.Validar">
 
 
     <ImageView
@@ -37,7 +37,7 @@
         app:layout_constraintVertical_bias="0.487" />
 
     <TextView
-        android:id="@+id/txt_name"
+        android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
