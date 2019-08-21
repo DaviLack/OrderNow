@@ -5,8 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ae3e3e"
-    tools:context=".Usuarios.Validar">
+    tools:context=".Activitys.Welcome">
 
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/Ani_success"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/plateOrder3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/launch_time" />
 
     <ImageView
         android:id="@+id/plateOrder3"
@@ -37,7 +53,7 @@
         app:layout_constraintVertical_bias="0.487" />
 
     <TextView
-        android:id="@+id/username"
+        android:id="@+id/txt_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -71,6 +87,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.404"
         app:layout_constraintVertical_chainStyle="spread_inside" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
