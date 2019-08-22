@@ -31,12 +31,13 @@
         <activity android:name=".Activitys.Welcome"/>
         <activity android:name=".Usuarios.Login"/>
         <activity android:name=".Activitys.Inicio" />
-        <activity android:name=".Usuarios.Registro" />
+        <activity android:name=".Usuarios.Registro"
+                android:theme="@style/White"/>
         <activity android:name=".QrCode.ScanCodeActivity"/>
         <activity
             android:name=".Activitys.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/White"/>
 
     </application>
 

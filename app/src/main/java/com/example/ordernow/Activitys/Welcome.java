@@ -9,13 +9,14 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ordernow.R;
+import com.example.ordernow.Usuarios.Validar;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class Welcome extends AppCompatActivity {
 
-    public static TextView username;
+    TextView username;
     TextView txt_ola, txt_bem;
     Typeface tf1, tf2, tf3;
 
@@ -38,7 +39,9 @@ public class Welcome extends AppCompatActivity {
 
         txt_bem = findViewById(R.id.txt_bem);
         txt_ola = findViewById(R.id.txt_ola);
-        username = findViewById(R.id.username);
+        username = findViewById(R.id.txt_name);
+
+        username.setText(Validar.ToolbarUser);
 
         tf1 = Typeface.createFromAsset(getAssets(), "Lena.ttf");
         tf2 = Typeface.createFromAsset(getAssets(), "pala.ttf");

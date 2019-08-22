@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             });
 
 
-
+/*
             logout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, Login.class));
                     finish();
                 }
-            });
+            }); */
         }
 
      private void requestCameraPermission(){

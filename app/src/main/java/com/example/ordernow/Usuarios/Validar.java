@@ -44,6 +44,7 @@ public class Validar extends AppCompatActivity {
 
 
         if(firebaseUser != null){
+
             Intent intent = new Intent (Validar.this, Welcome.class);
             startActivity(intent);
             finish();

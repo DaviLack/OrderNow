@@ -7,6 +7,7 @@ android:layout_height="match_parent"
 android:background="#ae3e3e"
 tools:context=".Usuarios.Login">
 
+
     <ImageView
         android:id="@+id/plateOrder"
         android:layout_width="644dp"
@@ -16,7 +17,7 @@ tools:context=".Usuarios.Login">
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.069"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/perfil" />
 
     <ProgressBar
