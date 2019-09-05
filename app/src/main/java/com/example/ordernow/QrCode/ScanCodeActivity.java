@@ -4,7 +4,8 @@ import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.ordernow.Activitys.Cardapio;
+import com.example.ordernow.Fragments.FragmentContact;
+import com.example.ordernow.Activitys.Teste;
 import com.google.zxing.Result;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
@@ -26,8 +27,8 @@ public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerV
     @Override
     public void handleResult(Result result) {
 
-            Cardapio.QrMenu = result.getText();
-            startActivity(new Intent(getApplicationContext(), Cardapio.class));
+            FragmentContact.QrMenu = result.getText();
+            startActivity(new Intent(getApplicationContext(), Teste.class));
 
     }
 

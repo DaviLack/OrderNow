@@ -1,11 +1,14 @@
 package com.example.ordernow.Activitys;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
+import com.example.ordernow.Adapters.ViewPagerAdapter;
+import com.example.ordernow.Fragments.FragmentCall;
+import com.example.ordernow.Fragments.FragmentContact;
+import com.example.ordernow.Fragments.FragmentFav;
 import com.example.ordernow.R;
 import com.google.android.material.tabs.TabLayout;
 
