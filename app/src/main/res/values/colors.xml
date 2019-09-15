@@ -3,5 +3,7 @@
     <color name="colorPrimary">#ae3e3e</color>
     <color name="colorPrimaryDark">#ae3e3e</color>
     <color name="colorAccent">#D04747</color>
-    <color name="colorRegistro">#fff</color>
+    <color name="colorRegistro">#CAC8C8</color>
+    <color name="colorTabBar">#F5F2F2</color>
+    <color name="backgrondfragment">#Fff</color>
 </resources>

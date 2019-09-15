@@ -25,6 +25,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.example.ordernow.QrCode.ScanCodeActivity;
 import com.example.ordernow.R;
@@ -33,6 +34,10 @@ import com.google.firebase.database.DataSnapshot;
 import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity {
+
+    ViewFlipper v_flipper;
+
+
     private int CAMERA_PERMISSION_CODE = 1;
     
     public static TextView ToolbarUser;
@@ -47,6 +52,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        int image[] = {R.drawable.foratras, R.drawable.habibs, R.drawable.hamburguer};
+
+
+        v_flipper = findViewById(R.id.v_flipper);
+
+        for (int images: image){
+            flipperImages(images);
+        }
+
 
         logout = findViewById(R.id.logout);
         profile_image = findViewById(R.id.profile_image);
@@ -84,6 +99,19 @@ public class MainActivity extends AppCompatActivity {
                     finish();
                 }
             }); */
+        }
+
+        public void flipperImages(int image){
+            ImageView imageView = new ImageView(this);
+            imageView.setBackgroundResource(image);
+
+            v_flipper.addView(imageView);
+            v_flipper.setFlipInterval(4000);
+            v_flipper.setAutoStart(true);
+
+            v_flipper.setInAnimation(this, android.R.anim.slide_in_left);
+            v_flipper.setOutAnimation(this, android.R.anim.slide_out_right);
+
         }
 
      private void requestCameraPermission(){

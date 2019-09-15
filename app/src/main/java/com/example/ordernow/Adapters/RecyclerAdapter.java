@@ -1,4 +1,4 @@
-package com.example.ordernow.Activitys;
+package com.example.ordernow.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,9 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ordernow.Activitys.Carrinho;
 import com.example.ordernow.R;
-import com.example.ordernow.Usuarios.Login;
-import com.example.ordernow.Usuarios.Validar;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -86,7 +85,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 @Override
                 public void onClick(View v) {
 
-                    Intent intent = new Intent(v.getContext(),Carrinho.class);
+                    Intent intent = new Intent(v.getContext(), Carrinho.class);
                     v.getContext().startActivity(intent);
                 }
             });

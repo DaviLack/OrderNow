@@ -24,6 +24,15 @@
             android:layout_marginTop="15px"
             android:orientation="horizontal">
 
+            <ViewFlipper
+                android:id="@+id/v_flipper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            </ViewFlipper>
+
+
         </LinearLayout>
     </LinearLayout>
 
@@ -32,7 +41,7 @@
         android:layout_height="458dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="535px"
+        android:layout_marginTop="400px"
         android:layout_marginBottom="-1dp"
         android:orientation="vertical">
 
