@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 
@@ -36,6 +37,9 @@ import com.squareup.picasso.Picasso;
 public class MainActivity extends AppCompatActivity {
 
     ViewFlipper v_flipper;
+    TextView tv_carteira;
+    TextView tv_dinheiro;
+    Typeface tf1, tf2, tf3;
 
 
     private int CAMERA_PERMISSION_CODE = 1;
@@ -57,6 +61,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         v_flipper = findViewById(R.id.v_flipper);
+        tv_carteira = findViewById(R.id.tv_carteira);
+        tv_dinheiro = findViewById(R.id.tv_dinheiro);
+
+        tf1 = Typeface.createFromAsset(getAssets(), "Lena.ttf");
+        tf2 = Typeface.createFromAsset(getAssets(), "pala.ttf");
+        tf3 = Typeface.createFromAsset(getAssets(), "Scaramella-Regular.otf");
+
 
         for (int images: image){
             flipperImages(images);
@@ -106,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
             imageView.setBackgroundResource(image);
 
             v_flipper.addView(imageView);
-            v_flipper.setFlipInterval(4000);
+            v_flipper.setFlipInterval(3000);
             v_flipper.setAutoStart(true);
 
             v_flipper.setInAnimation(this, android.R.anim.slide_in_left);
