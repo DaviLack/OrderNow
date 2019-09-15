@@ -20,14 +20,14 @@
         <LinearLayout
             android:background="#fff"
             android:layout_width="match_parent"
-            android:layout_height="191dp"
+            android:layout_height="550px"
             android:layout_marginTop="15px"
             android:orientation="horizontal">
 
             <ViewFlipper
                 android:id="@+id/v_flipper"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="550px">
 
 
             </ViewFlipper>
@@ -38,21 +38,43 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="458dp"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="400px"
+        android:layout_marginTop="500px"
         android:layout_marginBottom="-1dp"
         android:orientation="vertical">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="101dp"
+            android:layout_height="200px"
             android:background="#E6DFDF"
             android:orientation="vertical">
 
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/tv_carteira"
+                android:layout_marginTop="25dp"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Minha Carteira" />
+
+            <TextView
+                android:id="@+id/tv_dinheiro"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="355dp"
+                android:layout_marginTop="25dp"
+                android:textSize="17sp"
+                android:text="0.00"
+                android:textStyle="bold"
+                android:textColor="#39FF14" />
+
+        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
