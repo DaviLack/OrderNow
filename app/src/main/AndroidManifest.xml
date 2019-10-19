@@ -20,7 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activitys.Teste"/>
+        <activity android:name=".Carrinho.Carrinho"></activity>
+        <activity android:name=".Activitys.Teste" />
         <activity android:name=".Usuarios.Validar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,17 +29,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activitys.Welcome"/>
-        <activity android:name=".Usuarios.Login"/>
+        <activity android:name=".Activitys.Welcome" />
+        <activity android:name=".Usuarios.Login" />
         <activity android:name=".Activitys.Inicio" />
-        <activity android:name=".Usuarios.Registro"
-                android:theme="@style/White"/>
-        <activity android:name=".QrCode.ScanCodeActivity"/>
+        <activity
+            android:name=".Usuarios.Registro"
+            android:theme="@style/White" />
+        <activity android:name=".QrCode.ScanCodeActivity" />
         <activity
             android:name=".Activitys.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/White"/>
-
+            android:theme="@style/White" />
     </application>
 
 </manifest>

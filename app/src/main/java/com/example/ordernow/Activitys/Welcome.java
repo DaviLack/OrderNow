@@ -16,6 +16,7 @@ import java.util.TimerTask;
 
 public class Welcome extends AppCompatActivity {
 
+
     TextView username;
     TextView txt_ola, txt_bem;
     Typeface tf1, tf2, tf3;
@@ -26,6 +27,7 @@ public class Welcome extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+
 
         Timer Timer = new Timer();
         TimerTask Task = new TimerTask() {
@@ -39,15 +41,16 @@ public class Welcome extends AppCompatActivity {
 
         txt_bem = findViewById(R.id.txt_bem);
         txt_ola = findViewById(R.id.txt_ola);
-        username = findViewById(R.id.txt_name);
 
+        username = findViewById(R.id.txt_name);
         username.setText(Validar.ToolbarUser);
+
 
         tf1 = Typeface.createFromAsset(getAssets(), "Lena.ttf");
         tf2 = Typeface.createFromAsset(getAssets(), "pala.ttf");
         tf3 = Typeface.createFromAsset(getAssets(), "Scaramella-Regular.otf");
 
-        txt_bem.setTypeface(tf2);
+
         txt_ola.setTypeface(tf2);
         username.setTypeface(tf2);
 

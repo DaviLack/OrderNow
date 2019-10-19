@@ -37,6 +37,8 @@ public class Cardapio extends AppCompatActivity {
 
     public static String QrMenu;
 
+    public static Images currentFood;
+
     private DatabaseReference reference;
     private StorageReference mStorageRef;
 
@@ -86,6 +88,8 @@ public class Cardapio extends AppCompatActivity {
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
 
                     if(snapshot.child("QrMenu").getValue().toString().equals(QrMenu)) {
+
+                        currentFood = dataSnapshot.getValue(Images.class);
 
                         Images images = new Images();
 

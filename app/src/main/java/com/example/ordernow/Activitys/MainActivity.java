@@ -8,9 +8,8 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 
-import com.bumptech.glide.Glide;
-import com.example.ordernow.Usuarios.Login;
-import com.example.ordernow.Usuarios.User;
+import com.example.ordernow.Carrinho.Carrinho;
+import com.example.ordernow.Database.Database;
 import com.example.ordernow.Usuarios.Validar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.core.app.ActivityCompat;
@@ -18,11 +17,9 @@ import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
+
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,21 +27,22 @@ import android.widget.ViewFlipper;
 
 import com.example.ordernow.QrCode.ScanCodeActivity;
 import com.example.ordernow.R;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
 import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity {
 
     ViewFlipper v_flipper;
     TextView tv_carteira;
-    TextView tv_dinheiro;
+    TextView saldo;
     Typeface tf1, tf2, tf3;
+    Button btn_carrinho;
 
 
     private int CAMERA_PERMISSION_CODE = 1;
-    
+
     public static TextView ToolbarUser;
+
+
     ImageView profile_image;
     FloatingActionButton scan_btn;
     Button logout;
@@ -62,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
 
         v_flipper = findViewById(R.id.v_flipper);
         tv_carteira = findViewById(R.id.tv_carteira);
-        tv_dinheiro = findViewById(R.id.tv_dinheiro);
+        saldo = findViewById(R.id.tv_saldo);
+        btn_carrinho = findViewById(R.id.btn_carrinho);
 
         tf1 = Typeface.createFromAsset(getAssets(), "Lena.ttf");
         tf2 = Typeface.createFromAsset(getAssets(), "pala.ttf");
@@ -84,8 +83,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         ToolbarUser = findViewById(R.id.ToolbarUser);
-
         ToolbarUser.setText(Validar.ToolbarUser);
+
+        saldo = findViewById(R.id.tv_saldo);
+        saldo.setText("R$ " + Validar.saldo);
+
 
 
             FloatingActionButton btn_scan = findViewById(R.id.btn_scan);
@@ -93,12 +95,22 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+                        new Database(getBaseContext()).cleanCart();
                         startActivity(new Intent(getApplicationContext(), ScanCodeActivity.class));
                     } else {
                         requestCameraPermission();
                     }
                 }
             });
+
+        btn_carrinho.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getApplicationContext(), Carrinho.class));
+
+            }
+        });
 
 
 /*

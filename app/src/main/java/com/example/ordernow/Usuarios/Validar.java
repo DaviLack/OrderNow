@@ -27,6 +27,7 @@ public class Validar extends AppCompatActivity {
 
     public static String profile_image;
     public static String ToolbarUser;
+    public static String saldo;
 
 
     FirebaseUser firebaseUser;
@@ -60,6 +61,7 @@ public class Validar extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 User user = dataSnapshot.getValue(User.class);
                 ToolbarUser = user.getUsername();
+                saldo = user.getSaldo();
 
                 if(user.getImageURL().equals("default")){
                     profile_image = user.getImageURL();
