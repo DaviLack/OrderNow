@@ -8,11 +8,14 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.ordernow.Activitys.Carrinho;
+import com.example.ordernow.Carrinho.Carrinho;
+import com.example.ordernow.Carrinho.Order;
+import com.example.ordernow.Database.Database;
 import com.example.ordernow.R;
 import com.squareup.picasso.Picasso;
 
@@ -26,7 +29,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     private Context mContext;
     private ArrayList<Images> imageList;
-    private String productID;
+
 
 
     public RecyclerAdapter (Context context, ArrayList<Images> imageList){
@@ -46,10 +49,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        productID = imageList.get(position).getPid();
         holder.description.setText(imageList.get(position).getDescription());
         holder.nome.setText(imageList.get(position).getNome());
         holder.preco.setText(imageList.get(position).getPreco());
+
+        holder.nome2 = imageList.get(position).getNome();
+        holder.preco2 = imageList.get(position).getPreco();
         
 
         Picasso.get().load(imageList.get(position).getUrl()).into(holder.imageView);
@@ -68,7 +73,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         TextView nome;
         TextView preco;
         ImageButton addToCart;
-
+        String nome2, preco2;
 
         public ViewHolder(View itemView){
 
@@ -78,15 +83,21 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             description = (TextView) itemView.findViewById(R.id.description);
             nome = (TextView) itemView.findViewById(R.id.nome);
             preco = (TextView) itemView.findViewById(R.id.preco);
-            addToCart = (ImageButton) itemView.findViewById(R.id.addToCart);
+            addToCart = (ImageButton) itemView.findViewById(R.id.add);
 
 
             addToCart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    new Database(mContext).addToCart(new Order(
+                            "ID",
+                            nome2,
+                            "1",
+                            preco2,
+                            "0"));
 
-                    Intent intent = new Intent(v.getContext(), Carrinho.class);
-                    v.getContext().startActivity(intent);
+
+                    Toast.makeText(mContext, "Adicionado ao carrinho", Toast.LENGTH_SHORT).show();
                 }
             });
 

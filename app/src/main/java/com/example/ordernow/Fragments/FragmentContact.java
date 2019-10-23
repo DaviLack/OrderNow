@@ -1,10 +1,13 @@
 package com.example.ordernow.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ordernow.Adapters.Images;
 import com.example.ordernow.Adapters.RecyclerAdapter;
+import com.example.ordernow.Carrinho.Carrinho;
 import com.example.ordernow.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -28,7 +32,8 @@ import java.util.ArrayList;
 
 public class FragmentContact extends Fragment {
 
-    ImageButton btn_add;
+    ImageView cartimage;
+    Button btn_carrinho;
 
     public static String QrMenu;
 
@@ -60,12 +65,27 @@ public class FragmentContact extends Fragment {
 
         imageList = new ArrayList<>();
 
+
         init();
 
         return v;
+
+
     }
 
+    public void abrircarrinho() {
+        ImageView cartimage = (ImageView) getActivity().findViewById(R.id.cartimage);
 
+        Button btn_carrinho = (Button) getActivity().findViewById(R.id.btn_carrinho);
+
+         btn_carrinho.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent i = new Intent(getActivity(), Carrinho.class);
+            startActivity(i);
+        }
+    });
+}
     private void init() {
 
         clearAll();

@@ -7,13 +7,15 @@ public class User {
     private String imageURL;
     private String ddd;
     private String cell;
+    private String saldo;
 
-    public User(String id, String username, String imageURL, String ddd, String cell) {
+    public User(String id, String username, String imageURL, String ddd, String cell, String saldo) {
         this.id = id;
         this.username = username;
         this.imageURL = imageURL;
         this.ddd = ddd;
         this.cell = cell;
+        this.saldo = saldo;
     }
 
 
@@ -55,6 +57,14 @@ public class User {
 
     public void setCell(String cell) {
         this.cell = cell;
+    }
+
+    public String getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(String saldo) {
+        this.saldo = saldo;
     }
 
     public User(){
