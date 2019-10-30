@@ -14,25 +14,25 @@
 
     <androidx.cardview.widget.CardView
         android:layout_alignParentBottom="true"
-        app:cardBackgroundColor="#FF0000"
+        app:cardBackgroundColor="#fff"
         android:layout_width="match_parent"
-        android:layout_height="61dp">
+        android:layout_height="100dp">
 
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="362dp"
+                android:layout_height="30dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="13dp"
-                android:layout_marginBottom="21dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="62dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -40,17 +40,17 @@
                     android:id="@+id/txt_total"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pagar                ------->"
-                    android:textColor="#fff"
+                    android:text="Total:"
+                    android:textColor="#000"
                     android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/total"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="86dp"
+                    android:layout_marginLeft="215dp"
                     android:text="10000"
-                    android:textColor="#fff"
+                    android:textColor="#000"
                     android:textSize="24sp" />
 
 
@@ -58,20 +58,19 @@
 
             <Button
                 android:id="@+id/btnPlaceOrder"
-                android:layout_width="367dp"
-                android:layout_height="47dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="8dp"
-                android:background="#66000000"
-                android:text="" />
-
-
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="52dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="#FF0000"
+                android:textColor="#000"
+                android:text="Fazer Pedido" />
 
 
         </RelativeLayout>

@@ -68,24 +68,24 @@ public class FragmentContact extends Fragment {
 
         init();
 
+        btn_carrinho = (Button) v.findViewById(R.id.btn_carrinho);
+
+        btn_carrinho.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), Carrinho.class);
+                startActivity(i);
+
+            }
+        });
+
+
         return v;
+
 
 
     }
 
-    public void abrircarrinho() {
-        ImageView cartimage = (ImageView) getActivity().findViewById(R.id.cartimage);
-
-        Button btn_carrinho = (Button) getActivity().findViewById(R.id.btn_carrinho);
-
-         btn_carrinho.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent i = new Intent(getActivity(), Carrinho.class);
-            startActivity(i);
-        }
-    });
-}
     private void init() {
 
         clearAll();
