@@ -20,7 +20,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Carrinho.Carrinho"></activity>
+        <activity android:name=".Activitys.Carteira"></activity>
+        <activity android:name=".Activitys.Payment" />
+        <activity android:name=".Activitys.CartaoActivity" />
+        <activity android:name=".Carrinho.Carrinho" />
         <activity android:name=".Activitys.Teste" />
         <activity android:name=".Usuarios.Validar">
             <intent-filter>
