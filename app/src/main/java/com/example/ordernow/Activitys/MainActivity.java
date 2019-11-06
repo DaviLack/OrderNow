@@ -20,6 +20,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     public static TextView ToolbarUser;
 
 
-    ImageView profile_image;
+    ImageButton profile_image;
     FloatingActionButton scan_btn;
     Button logout;
 
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         tv_carteira = findViewById(R.id.tv_carteira);
         saldo = findViewById(R.id.tv_saldo);
         btn_carrinho = findViewById(R.id.btn_carrinho);
+
 
         tf1 = Typeface.createFromAsset(getAssets(), "Lena.ttf");
         tf2 = Typeface.createFromAsset(getAssets(), "pala.ttf");
@@ -109,6 +111,13 @@ public class MainActivity extends AppCompatActivity {
 
                 startActivity(new Intent(getApplicationContext(), Carrinho.class));
 
+            }
+        });
+
+        profile_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
             }
         });
 
