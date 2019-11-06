@@ -214,7 +214,7 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <TextView
-            android:id="@+id/textView3561"
+            android:id="@+id/text_separar2"
             android:layout_width="408dp"
             android:layout_height="20dp"
             android:layout_marginStart="8dp"
@@ -229,13 +229,13 @@
             app:layout_constraintVertical_bias="0.903" />
 
         <ImageView
-            android:id="@+id/imageView9as"
+            android:id="@+id/image_seta2"
             android:layout_width="20dp"
             android:layout_height="19dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/buttond1"
+            app:layout_constraintBottom_toTopOf="@+id/botao_clicar3"
             app:layout_constraintEnd_toEndOf="@+id/botao_clicar2"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/botao_clicar2"
@@ -244,7 +244,7 @@
             app:srcCompat="@drawable/arrow" />
 
         <ImageView
-            android:id="@+id/imageView1d5"
+            android:id="@+id/img_fav"
             android:layout_width="35dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -260,7 +260,7 @@
             app:srcCompat="@drawable/favorite" />
 
         <Button
-            android:id="@+id/buttond1"
+            android:id="@+id/botao_clicar3"
             android:layout_width="410dp"
             android:layout_height="52dp"
             android:layout_marginStart="8dp"
@@ -275,7 +275,7 @@
             app:layout_constraintVertical_bias="0.327" />
 
         <TextView
-            android:id="@+id/textView65dd44"
+            android:id="@+id/text_fav"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -284,30 +284,30 @@
             android:text="Favoritos"
             android:textSize="11sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/buttond1"
+            app:layout_constraintBottom_toBottomOf="@+id/botao_clicar3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.135"
-            app:layout_constraintStart_toStartOf="@+id/buttond1"
-            app:layout_constraintTop_toTopOf="@+id/buttond1"
+            app:layout_constraintStart_toStartOf="@+id/botao_clicar3"
+            app:layout_constraintTop_toTopOf="@+id/botao_clicar3"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/textView56dd54"
+            android:id="@+id/text_favinha"
             android:layout_width="206dp"
             android:layout_height="13dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:text="Estabelecimentos favoritados"
             android:textSize="10sp"
-            app:layout_constraintBottom_toBottomOf="@+id/buttond1"
-            app:layout_constraintEnd_toEndOf="@+id/buttond1"
+            app:layout_constraintBottom_toBottomOf="@+id/botao_clicar3"
+            app:layout_constraintEnd_toEndOf="@+id/botao_clicar3"
             app:layout_constraintHorizontal_bias="0.285"
-            app:layout_constraintStart_toStartOf="@+id/buttond1"
-            app:layout_constraintTop_toTopOf="@+id/buttond1"
+            app:layout_constraintStart_toStartOf="@+id/botao_clicar3"
+            app:layout_constraintTop_toTopOf="@+id/botao_clicar3"
             app:layout_constraintVertical_bias="0.612" />
 
         <TextView
-            android:id="@+id/textView35ss61"
+            android:id="@+id/text_separar3"
             android:layout_width="408dp"
             android:layout_height="20dp"
             android:layout_marginEnd="8dp"
@@ -317,21 +317,21 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/botao_clicar2"
-            app:layout_constraintTop_toTopOf="@+id/buttond1"
+            app:layout_constraintTop_toTopOf="@+id/botao_clicar3"
             app:layout_constraintVertical_bias="0.126" />
 
         <ImageView
-            android:id="@+id/imageView9asa"
+            android:id="@+id/image_seta3"
             android:layout_width="20dp"
             android:layout_height="17dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView35ss61"
-            app:layout_constraintEnd_toEndOf="@+id/buttond1"
+            app:layout_constraintBottom_toBottomOf="@+id/text_separar3"
+            app:layout_constraintEnd_toEndOf="@+id/botao_clicar3"
             app:layout_constraintHorizontal_bias="0.997"
-            app:layout_constraintStart_toStartOf="@+id/buttond1"
-            app:layout_constraintTop_toTopOf="@+id/buttond1"
+            app:layout_constraintStart_toStartOf="@+id/botao_clicar3"
+            app:layout_constraintTop_toTopOf="@+id/botao_clicar3"
             app:srcCompat="@drawable/arrow" />
 
 

@@ -20,7 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activitys.Carteira"></activity>
+        <activity android:name=".Activitys.MostrarProfile"></activity>
+        <activity android:name=".Activitys.Carteira" />
         <activity android:name=".Activitys.Payment" />
         <activity android:name=".Activitys.CartaoActivity" />
         <activity android:name=".Carrinho.Carrinho" />
