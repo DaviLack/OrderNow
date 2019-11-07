@@ -21,6 +21,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".Activitys.MostrarProfile"></activity>
+        <activity android:name=".Activitys.ProfileActivity"></activity>
         <activity android:name=".Activitys.Carteira" />
         <activity android:name=".Activitys.Payment" />
         <activity android:name=".Activitys.CartaoActivity" />
