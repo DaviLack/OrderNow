@@ -26,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 public class Validar extends AppCompatActivity {
 
     public static String profile_image;
-    public static String ToolbarUser;
+    public static String ToolbarUser, email_id, cpf_id, telefone_id;
     public static String saldo;
 
 
@@ -43,16 +43,12 @@ public class Validar extends AppCompatActivity {
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
 
+        if (firebaseUser != null) {
 
-        if(firebaseUser != null){
-
-            Intent intent = new Intent (Validar.this, Welcome.class);
+            Intent intent = new Intent(Validar.this, Welcome.class);
             startActivity(intent);
             finish();
-        }
-        else{
-            startActivity(new Intent(Validar.this, Login.class));
-        }
+
 
         reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
 
@@ -61,13 +57,13 @@ public class Validar extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 User user = dataSnapshot.getValue(User.class);
                 ToolbarUser = user.getUsername();
+                telefone_id = user.getCell();
                 saldo = user.getSaldo();
+                email_id = firebaseUser.getEmail();
 
-                if(user.getImageURL().equals("default")){
+                if (user.getImageURL().equals("default")) {
                     profile_image = user.getImageURL();
-                }
-
-                else{
+                } else {
                     profile_image = user.getImageURL();
                 }
 
@@ -79,6 +75,12 @@ public class Validar extends AppCompatActivity {
 
             }
         });
+        }
+
+        else{
+        startActivity(new Intent(Validar.this, Login.class));
+        }
+
     }
 
 

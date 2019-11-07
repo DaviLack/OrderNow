@@ -107,11 +107,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <Button
-                    android:id="@+id/btn_carrinho"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Carrinho" />
+                <RelativeLayout
+                    android:layout_width="353dp"
+                    android:layout_height="357dp"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginTop="50dp"
+                    android:background="#d0d0d0">
+
+                </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
 

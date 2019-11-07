@@ -6,18 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".Activitys.CartaoActivity">
 
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="408dp"
+        android:layout_height="185dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/teste2" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="32dp"
+            android:layout_height="37dp"
+            android:layout_alignStart="@+id/imageView2"
+            android:layout_alignTop="@+id/imageView2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="370dp"
+            android:layout_marginBottom="140dp"
+            app:srcCompat="@drawable/back_arrow" />
+
+
+    </RelativeLayout>
+
     <EditText
         android:id="@+id/card_number"
         android:layout_width="307dp"
         android:layout_height="49dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="144dp"
         android:layout_marginEnd="52dp"
         android:ems="10"
         android:hint="Número do cartão"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titulo_activity" />
 
@@ -26,7 +62,7 @@
         android:layout_width="164dp"
         android:layout_height="46dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="Validade"
         android:inputType="date"
@@ -43,9 +79,9 @@
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/nome_card"
         app:layout_constraintTop_toBottomOf="@+id/card_number"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="225dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.187"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="225dp" />
 
     <EditText
         android:id="@+id/nome_card"
@@ -62,7 +98,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/validade_card" />
+        app:layout_constraintTop_toBottomOf="@+id/validade_card"
+        app:layout_constraintVertical_bias="0.4" />
 
     <EditText
         android:id="@+id/cpf_user"
@@ -70,7 +107,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="51dp"
         android:layout_marginEnd="51dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginBottom="256dp"
         android:ems="10"
         android:hint="CPF"
         android:inputType="number"
@@ -104,6 +141,7 @@
         android:layout_marginBottom="104dp"
         android:text="Cartão de Crédito/Débito"
         android:textSize="18dp"
+        android:textColor="#000"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/card_number"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,13 +153,32 @@
         android:layout_width="226dp"
         android:layout_height="47dp"
         android:layout_marginStart="92dp"
-        android:layout_marginTop="89dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="93dp"
-        android:layout_marginBottom="164dp"
+        android:layout_marginBottom="84dp"
         android:background="@drawable/button_design"
         android:text="Pagar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cpf_user" />
+        app:layout_constraintTop_toBottomOf="@+id/cpf_user"
+        app:layout_constraintVertical_bias="0.944" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="21dp"
+        android:text="Insira os dados do cartão"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/card_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
