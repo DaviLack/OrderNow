@@ -8,7 +8,7 @@
 
 
     <RelativeLayout
-        android:id="@+id/relativeLayout2"
+        android:id="@+id/fundo_mostar"
         android:layout_width="408dp"
         android:layout_height="185dp"
         android:layout_marginStart="1dp"
@@ -20,13 +20,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/img_fundo_mostrar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:srcCompat="@drawable/teste2" />
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/back_mostrar"
             android:layout_width="32dp"
             android:layout_height="37dp"
             android:layout_alignStart="@+id/imageView2"
@@ -43,7 +43,7 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/nome_mostrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -53,15 +53,15 @@
         android:textSize="18dp"
         android:textStyle="bold"
         android:text="Nome:"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintBottom_toTopOf="@+id/separar_mostrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/fundo_mostar"
         app:layout_constraintVertical_bias="0.913" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/Email_mostrar"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
         android:layout_marginStart="8dp"
@@ -73,10 +73,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/separar_mostrar" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/cpf_mostrar"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:layout_marginStart="35dp"
@@ -88,10 +88,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/separar_mostrar2" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/telefone_mostrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
@@ -101,14 +101,14 @@
         android:text="Telefone:"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintBottom_toTopOf="@+id/separar_mostrar3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+        app:layout_constraintTop_toBottomOf="@+id/separar_mostrar4" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/edit_informacoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="270dp"
@@ -122,10 +122,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.939"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toBottomOf="@+id/separar_mostrar3" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/separar_mostrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -133,28 +133,28 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="______________________________________________"
-        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintBottom_toTopOf="@+id/separar_mostrar2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/fundo_mostar"
         app:layout_constraintVertical_bias="0.71" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/separar_mostrar2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="______________________________________________"
-        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintBottom_toTopOf="@+id/separar_mostrar4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/fundo_mostar"
         app:layout_constraintVertical_bias="0.813" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/separar_mostrar3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
@@ -164,10 +164,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/telefone_mostrar" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/separar_mostrar4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
@@ -175,13 +175,13 @@
         android:layout_marginEnd="43dp"
         android:layout_marginBottom="12dp"
         android:text="______________________________________________"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/telefone_mostrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/cpf_mostrar" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/dados_pessoais"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="133dp"
@@ -191,9 +191,64 @@
         android:text="Dados Pessoais"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintBottom_toTopOf="@+id/separar_mostrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/fundo_mostar" />
+
+    <TextView
+        android:id="@+id/nome_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nome_mostrar" />
+
+    <TextView
+        android:id="@+id/cpf_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cpf_mostrar" />
+
+    <TextView
+        android:id="@+id/telefone_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telefone_mostrar" />
+
+    <TextView
+        android:id="@+id/email_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Email_mostrar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

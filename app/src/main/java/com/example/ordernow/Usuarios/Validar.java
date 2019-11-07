@@ -26,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 public class Validar extends AppCompatActivity {
 
     public static String profile_image;
-    public static String ToolbarUser;
+    public static String ToolbarUser, email_id, cpf_id, telefone_id;
     public static String saldo;
 
 
@@ -61,7 +61,9 @@ public class Validar extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 User user = dataSnapshot.getValue(User.class);
                 ToolbarUser = user.getUsername();
+                telefone_id = user.getCell();
                 saldo = user.getSaldo();
+                email_id = firebaseUser.getEmail();
 
                 if(user.getImageURL().equals("default")){
                     profile_image = user.getImageURL();
