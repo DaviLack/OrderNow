@@ -1,17 +1,24 @@
 package com.example.ordernow.Carrinho;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.ordernow.Adapters.CartAdapter;
 import com.example.ordernow.Database.Database;
 import com.example.ordernow.R;
+import com.example.ordernow.Usuarios.Validar;
+import com.google.android.gms.common.internal.service.Common;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -26,7 +33,7 @@ public class Carrinho extends AppCompatActivity {
     RecyclerView.LayoutManager layoutManager;
 
     FirebaseDatabase database;
-    DatabaseReference request;
+    DatabaseReference requests;
 
     TextView txtTotalPrice;
     Button btnPlace;
@@ -43,7 +50,7 @@ public class Carrinho extends AppCompatActivity {
 
 
         database = FirebaseDatabase.getInstance();
-        request = database.getReference("Requests");
+        requests = database.getReference("Requests");
 
         recyclerView = (RecyclerView)findViewById(R.id.listCart);
         recyclerView.setHasFixedSize(true);
@@ -60,8 +67,55 @@ public class Carrinho extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                showAlertDialog();
             }
         });
+
+    }
+
+    private void showAlertDialog() {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(Carrinho.this);
+        alertDialog.setTitle("Quase lá!");
+        alertDialog.setMessage("Digite o número da sua mesa");
+
+        final EditText edtMesa = new EditText(Carrinho.this);
+        LinearLayout.LayoutParams p1 = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT
+        );
+        edtMesa.setLayoutParams(p1);
+        alertDialog.setView(edtMesa);
+        alertDialog.setIcon(R.drawable.cart);
+
+        alertDialog.setPositiveButton("SIM", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Request request = new Request(
+                        Validar.telefone_id,
+                        Validar.ToolbarUser,
+                        edtMesa.getText().toString(),
+                        txtTotalPrice.getText().toString(),
+                        cart
+                );
+
+                requests.child(String.valueOf(System.currentTimeMillis()))
+                        .setValue(request);
+                new Database(getBaseContext()).cleanCart();
+                Toast.makeText(Carrinho.this, "Obrigado", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
+
+        alertDialog.setNegativeButton("NÃO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+
+        alertDialog.show();
+
+
 
     }
 
