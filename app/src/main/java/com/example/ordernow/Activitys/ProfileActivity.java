@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ordernow.Carrinho.Carrinho;
 import com.example.ordernow.R;
+import com.example.ordernow.Usuarios.Validar;
+import com.squareup.picasso.Picasso;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -44,6 +46,8 @@ public class ProfileActivity extends AppCompatActivity {
         botao_clicar = findViewById(R.id.botao_clicar);
         botao_clicar2 = findViewById(R.id.botao_clicar2);
         botao_clicar3 = findViewById(R.id.botao_clicar3);
+
+        text_nome.setText(Validar.ToolbarUser);
 
 
         botao_clicar.setOnClickListener(new View.OnClickListener() {
