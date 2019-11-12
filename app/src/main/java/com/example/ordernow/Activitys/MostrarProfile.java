@@ -12,7 +12,7 @@ import com.example.ordernow.Usuarios.Validar;
 public class MostrarProfile extends AppCompatActivity {
 
 ImageView img_fundo_mostrar, back_mostrar;
-TextView nome_mostrar,Email_mostrar,cpf_mostrar,telefone_mostrar, edit_informacoes, separar_mostrar, separar_mostrar2, separar_mostrar3, separar_mostrar4,dados_pessoais,nome_place, cpf_place, telefone_place, email_place;
+TextView dados_pessoais, nome_mostrar,Email_mostrar,cpf_mostrar,telefone_mostrar, edit_informacoes, separar_mostrar, separar_mostrar2, separar_mostrar3, separar_mostrar4,nome_place, cpf_place, telefone_place, email_place;
 
 
     @Override
@@ -23,6 +23,7 @@ TextView nome_mostrar,Email_mostrar,cpf_mostrar,telefone_mostrar, edit_informaco
         img_fundo_mostrar = findViewById(R.id.img_fundo_mostrar);
         back_mostrar = findViewById(R.id.back_mostrar);
         nome_mostrar = findViewById(R.id.nome_mostrar);
+        dados_pessoais = findViewById(R.id.dados_pessoais);
         Email_mostrar = findViewById(R.id.Email_mostrar);
         cpf_mostrar = findViewById(R.id.cpf_mostrar);
         telefone_mostrar = findViewById(R.id.telefone_mostrar);

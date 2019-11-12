@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Carteira">
+    tools:context=".Activitys.Carteira"
+    android:background="#FA8072">
 
     <RelativeLayout
         android:id="@+id/layouttop"
@@ -27,31 +28,61 @@
         <ImageView
             android:id="@+id/back_wallet"
             android:layout_width="32dp"
-            android:layout_height="37dp"
+            android:layout_height="29dp"
             android:layout_alignStart="@+id/imageView2"
             android:layout_alignTop="@+id/imageView2"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="6dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="370dp"
-            android:layout_marginBottom="140dp"
+            android:layout_marginEnd="369dp"
+            android:layout_marginBottom="146dp"
             app:srcCompat="@drawable/back_arrow" />
 
         <TextView
-            android:id="@+id/txt_carteira"
-            android:layout_width="82dp"
-            android:layout_height="26dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="166dp"
-            android:layout_marginTop="81dp"
-            android:layout_marginEnd="160dp"
-            android:layout_marginBottom="78dp"
-            android:text="Carteira"
-            android:textSize="20dp"
+            android:id="@+id/name_carteira"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/fundo_wallet"
+            android:layout_alignTop="@+id/fundo_wallet"
+            android:layout_alignEnd="@+id/fundo_wallet"
+            android:layout_marginStart="-1dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="48dp"
+            android:text="Usuário"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/perf_carteira"
+            android:layout_width="wrap_content"
+            android:layout_height="97dp"
+            android:layout_alignStart="@+id/fundo_wallet"
+            android:layout_alignTop="@+id/fundo_wallet"
+            android:layout_alignEnd="@+id/fundo_wallet"
+            android:layout_marginStart="153dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="153dp"
+            app:srcCompat="@drawable/boy" />
+
+        <TextView
+            android:id="@+id/welcome_carteira"
+            android:layout_width="407dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/fundo_wallet"
+            android:layout_alignTop="@+id/fundo_wallet"
+            android:layout_alignEnd="@+id/fundo_wallet"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="-2dp"
+            android:layout_marginBottom="19dp"
+            android:text="Bem-Vindo"
+            android:textAlignment="center"
+            android:textColor="#1E90FF"
+            android:textSize="16dp"
             android:textStyle="bold" />
 
 
@@ -59,17 +90,19 @@
 
     <RelativeLayout
         android:id="@+id/layoutdown"
-        android:layout_width="409dp"
-        android:layout_height="543dp"
+        android:layout_width="420dp"
+        android:layout_height="544dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
+        android:background="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
 
 
         <TextView
@@ -150,9 +183,9 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="74dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="39dp"
             android:layout_marginEnd="72dp"
-            android:layout_marginBottom="413dp"
+            android:layout_marginBottom="414dp"
             android:background="#d0d0d0">
 
             <RelativeLayout
@@ -215,6 +248,21 @@
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="328dp"
             app:srcCompat="@drawable/baseline_add_black_18dp" />
+
+        <TextView
+            android:id="@+id/txt_carteira"
+            android:layout_width="408dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="517dp"
+            android:text="Carteira"
+            android:textAlignment="center"
+            android:textSize="22dp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

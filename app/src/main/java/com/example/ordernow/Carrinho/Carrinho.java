@@ -71,7 +71,7 @@ public class Carrinho extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(getApplicationContext(), FinalActivity.class));
+                startActivity(new Intent(getApplicationContext(), Payment.class));
 
                 // showAlertDialog();
             }

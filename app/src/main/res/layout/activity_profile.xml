@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/image_fundo"
-        android:layout_width="match_parent"
-        android:layout_height="219dp"
+        android:layout_width="420dp"
+        android:layout_height="185dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -21,30 +21,32 @@
 
     <ImageView
         android:id="@+id/image_perfil"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="2dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="151dp"
-        android:layout_marginBottom="452dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginBottom="479dp"
         app:srcCompat="@drawable/boy" />
 
     <TextView
         android:id="@+id/text_nome"
-        android:layout_width="wrap_content"
+        android:layout_width="412dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/image_fundo"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
+        android:layout_marginStart="-411dp"
         android:layout_marginLeft="160dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="131dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="-1dp"
         android:layout_marginBottom="26dp"
         android:layout_toEndOf="@+id/image_perfil"
         android:text="Jailson Mendes"
+        android:textAlignment="center"
+        android:textColor="#000"
         android:textSize="17dp"
         android:textStyle="bold" />
 
@@ -353,6 +355,24 @@
             app:layout_constraintVertical_bias="0.952" />
 
 
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/back_profile"
+        android:layout_width="32dp"
+        android:layout_height="29dp"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="370dp"
+        android:layout_marginBottom="694dp"
+        app:srcCompat="@drawable/back_arrow" />
+
+
 
 </RelativeLayout>
