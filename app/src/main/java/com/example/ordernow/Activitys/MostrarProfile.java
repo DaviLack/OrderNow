@@ -2,7 +2,11 @@ package com.example.ordernow.Activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -11,10 +15,12 @@ import com.example.ordernow.Usuarios.Validar;
 
 public class MostrarProfile extends AppCompatActivity {
 
-ImageView img_fundo_mostrar, back_mostrar, perf_mostrar;
+ImageView img_fundo_mostrar, perf_mostrar;
+ImageButton back_mostrar;
 TextView dados_pessoais, nome_mostrar,Email_mostrar,cpf_mostrar,telefone_mostrar, edit_informacoes, separar_mostrar, separar_mostrar2, separar_mostrar3, separar_mostrar4,nome_place, cpf_place, telefone_place, email_place,name_mostrar, welcome_mostrar;
 
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +50,13 @@ TextView dados_pessoais, nome_mostrar,Email_mostrar,cpf_mostrar,telefone_mostrar
         nome_place.setText(Validar.ToolbarUser);
         telefone_place.setText(Validar.telefone_id);
         email_place.setText(Validar.email_id);
+
+        back_mostrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+            }
+        });
 
 
 

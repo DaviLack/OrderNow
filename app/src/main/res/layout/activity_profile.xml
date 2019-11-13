@@ -359,7 +359,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
+    <ImageButton
         android:id="@+id/back_profile"
         android:layout_width="32dp"
         android:layout_height="29dp"

@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,12 +16,14 @@ import android.widget.Toast;
 import com.example.ordernow.Carrinho.Carrinho;
 import com.example.ordernow.QrCode.ScanCodeActivity;
 import com.example.ordernow.R;
+import com.example.ordernow.Usuarios.Validar;
 
 public class CartaoActivity extends AppCompatActivity {
 
     Button btn_pay;
     EditText card_number, validade_card, cvv_card, nome_card, cpf_user;
     ImageView perf_cartao;
+    ImageButton back_cartao;
     TextView titulo_activity, name_cartao, welcome_cartao;
 
 
@@ -38,8 +41,18 @@ public class CartaoActivity extends AppCompatActivity {
         cpf_user = findViewById(R.id.cpf_user);
         perf_cartao = findViewById(R.id.perf_cartao);
         name_cartao = findViewById(R.id.name_cartao);
+        back_cartao = findViewById(R.id.back_cartao);
         welcome_cartao = findViewById(R.id.welcome_cartao);
         titulo_activity = findViewById(R.id.titulo_activity);
+
+        name_cartao.setText(Validar.ToolbarUser);
+
+        back_cartao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Payment.class));
+            }
+        });
 
         btn_pay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +72,7 @@ public class CartaoActivity extends AppCompatActivity {
                 }else if (txt_cvv.length() != 3){
                     Toast.makeText(CartaoActivity.this, "CVV incorreto", Toast.LENGTH_SHORT).show();
                 } else {
-                    startActivity(new Intent(getApplicationContext(), ScanCodeActivity.class));
+                    startActivity(new Intent(getApplicationContext(), FinalActivity.class));
                 }
 
             }

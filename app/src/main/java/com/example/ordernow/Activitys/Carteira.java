@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ordernow.R;
+import com.example.ordernow.Usuarios.Validar;
 
 public class Carteira extends AppCompatActivity {
 
@@ -31,6 +32,8 @@ public class Carteira extends AppCompatActivity {
         txt_dispo = findViewById(R.id.txt_dispo);
         txt_dinheiro_carteira = findViewById(R.id.txt_dinheiro_carteira);
         txt_carteira = findViewById(R.id.txt_carteira);
+
+        name_carteira.setText(Validar.ToolbarUser);
 
     }
 }

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,7 +20,7 @@ public class ProfileActivity extends AppCompatActivity {
     ImageView image_fundo, image_perfil, wallet_image, image_seta, information_image, image_seta2, img_fav, image_seta3;
     TextView text_nome, text_separar, text_carteira, text_carteirinha, text_information, text_informacaozinha, text_separar2,text_fav, text_favinha, text_separar3;
     Button botao_clicar, botao_clicar2, botao_clicar3;
-
+    ImageButton back_profile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,8 +47,16 @@ public class ProfileActivity extends AppCompatActivity {
         botao_clicar = findViewById(R.id.botao_clicar);
         botao_clicar2 = findViewById(R.id.botao_clicar2);
         botao_clicar3 = findViewById(R.id.botao_clicar3);
+        back_profile = findViewById(R.id.back_profile);
 
         text_nome.setText(Validar.ToolbarUser);
+
+        back_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            }
+        });
 
 
         botao_clicar.setOnClickListener(new View.OnClickListener() {
