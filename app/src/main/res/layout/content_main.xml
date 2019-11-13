@@ -108,11 +108,19 @@
                 android:layout_height="match_parent">
 
                 <RelativeLayout
-                    android:layout_width="353dp"
-                    android:layout_height="357dp"
+                    android:layout_width="344dp"
+                    android:layout_height="366dp"
                     android:layout_marginLeft="28dp"
                     android:layout_marginTop="50dp"
                     android:background="#d0d0d0">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="357dp">
+
+
+                    </androidx.recyclerview.widget.RecyclerView>
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>

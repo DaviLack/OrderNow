@@ -14,30 +14,68 @@
         android:layout_marginStart="1dp"
         android:layout_marginEnd="2dp"
         android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        android:background="#FA8072"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:id="@+id/fundo_cartao"
+            android:layout_width="410dp"
+            android:layout_height="185dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
             app:srcCompat="@drawable/teste2" />
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/back_cartao"
             android:layout_width="32dp"
-            android:layout_height="37dp"
+            android:layout_height="29dp"
             android:layout_alignStart="@+id/imageView2"
             android:layout_alignTop="@+id/imageView2"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="370dp"
-            android:layout_marginBottom="140dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="373dp"
+            android:layout_marginBottom="144dp"
             app:srcCompat="@drawable/back_arrow" />
+
+        <TextView
+            android:id="@+id/name_cartao"
+            android:layout_width="407dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/fundo_cartao"
+            android:layout_alignTop="@+id/fundo_cartao"
+            android:layout_alignEnd="@+id/fundo_cartao"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginEnd="-2dp"
+            android:text="Usuário"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/welcome_cartao"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:layout_alignStart="@+id/fundo_cartao"
+            android:layout_alignTop="@+id/fundo_cartao"
+            android:layout_alignEnd="@+id/fundo_cartao"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="154dp"
+            android:layout_marginEnd="0dp"
+            android:text="Bem-Vindo"
+            android:textAlignment="center"
+            android:textColor="#1E90FF"
+            android:textSize="16dp"
+            android:textStyle="bold" />
 
 
     </RelativeLayout>
@@ -47,7 +85,7 @@
         android:layout_width="307dp"
         android:layout_height="49dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="68dp"
         android:layout_marginEnd="52dp"
         android:ems="10"
         android:hint="Número do cartão"
@@ -55,7 +93,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo_activity" />
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
 
     <EditText
         android:id="@+id/validade_card"
@@ -117,9 +155,9 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/cartao_image"
-        android:layout_width="39dp"
-        android:layout_height="35dp"
+        android:id="@+id/perf_cartao"
+        android:layout_width="133dp"
+        android:layout_height="97dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -128,25 +166,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051"
-        app:srcCompat="@drawable/credit_card" />
+        app:layout_constraintVertical_bias="0.03"
+        app:srcCompat="@drawable/boy" />
 
     <TextView
         android:id="@+id/titulo_activity"
-        android:layout_width="220dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="93dp"
-        android:layout_marginBottom="104dp"
+        android:layout_width="410dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="Cartão de Crédito/Débito"
-        android:textSize="18dp"
+        android:textAlignment="center"
         android:textColor="#000"
+        android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/card_number"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cartao_image" />
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout2"
+        app:layout_constraintVertical_bias="0.274" />
 
     <Button
         android:id="@+id/btn_pay"
@@ -165,20 +205,5 @@
         app:layout_constraintTop_toBottomOf="@+id/cpf_user"
         app:layout_constraintVertical_bias="0.944" />
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="93dp"
-        android:layout_marginBottom="21dp"
-        android:text="Insira os dados do cartão"
-        android:textSize="20dp"
-        android:textColor="#000"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/card_number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

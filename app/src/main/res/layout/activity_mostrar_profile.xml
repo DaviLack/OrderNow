@@ -14,7 +14,6 @@
         android:layout_marginStart="1dp"
         android:layout_marginEnd="2dp"
         android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -27,8 +26,8 @@
 
         <ImageView
             android:id="@+id/back_mostrar"
-            android:layout_width="32dp"
-            android:layout_height="37dp"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
             android:layout_alignStart="@+id/imageView2"
             android:layout_alignTop="@+id/imageView2"
             android:layout_alignParentEnd="true"
@@ -36,25 +35,54 @@
             android:layout_marginStart="6dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="370dp"
-            android:layout_marginBottom="140dp"
+            android:layout_marginBottom="148dp"
             app:srcCompat="@drawable/back_arrow" />
 
-        <TextView
-            android:id="@+id/dados_pessoais"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/perf_mostrar"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="131dp"
-            android:layout_marginTop="83dp"
-            android:layout_marginEnd="132dp"
-            android:layout_marginBottom="51dp"
-            android:text="Dados Pessoais"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/img_fundo_mostrar" />
+            android:layout_alignStart="@+id/img_fundo_mostrar"
+            android:layout_alignTop="@+id/img_fundo_mostrar"
+            android:layout_alignEnd="@+id/img_fundo_mostrar"
+            android:layout_alignBottom="@+id/img_fundo_mostrar"
+            android:layout_marginStart="142dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="147dp"
+            android:layout_marginBottom="68dp"
+            app:srcCompat="@drawable/boy" />
+
+        <TextView
+            android:id="@+id/name_mostrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/img_fundo_mostrar"
+            android:layout_alignTop="@+id/img_fundo_mostrar"
+            android:layout_alignEnd="@+id/img_fundo_mostrar"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="115dp"
+            android:layout_marginEnd="0dp"
+            android:text="Usuário"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/welcome_mostrar"
+            android:layout_width="405dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/img_fundo_mostrar"
+            android:layout_alignTop="@+id/img_fundo_mostrar"
+            android:layout_alignEnd="@+id/img_fundo_mostrar"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="145dp"
+            android:layout_marginEnd="2dp"
+            android:text="Bem-Vindo"
+            android:textAlignment="center"
+            android:textColor="#1E90FF"
+            android:textSize="16dp"
+            android:textStyle="bold" />
 
 
     </RelativeLayout>
@@ -255,5 +283,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Email_mostrar"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/dados_pessoais"
+        android:layout_width="400dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Dados Pesooais"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fundo_mostar"
+        app:layout_constraintVertical_bias="0.271" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

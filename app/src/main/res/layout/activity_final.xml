@@ -28,30 +28,25 @@
         android:id="@+id/txt_pedido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="223dp"
-        android:layout_marginBottom="603dp"
-        android:text="Este é o código do pedido"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="608dp"
+        android:text="Código do pedido"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_realizado" />
 
     <TextView
         android:id="@+id/txt_cod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
+        android:layout_marginStart="11dp"
         android:layout_marginTop="21dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="609dp"
         android:text="1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txt_cod2"
+        app:layout_constraintEnd_toStartOf="@+id/txt_cod3"
         app:layout_constraintStart_toEndOf="@+id/txt_pedido"
         app:layout_constraintTop_toBottomOf="@+id/txt_realizado" />
 
@@ -60,11 +55,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="609dp"
         android:text="1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txt_cod3"
+        app:layout_constraintEnd_toStartOf="@+id/txt_cod5"
+        app:layout_constraintStart_toEndOf="@+id/txt_cod4"
         app:layout_constraintTop_toBottomOf="@+id/txt_realizado" />
 
     <TextView
@@ -72,11 +67,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="609dp"
         android:text="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/txt_cod6"
+        app:layout_constraintStart_toEndOf="@+id/txt_cod"
         app:layout_constraintTop_toBottomOf="@+id/txt_realizado" />
 
     <TextView
@@ -84,23 +79,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
-        android:layout_marginEnd="7dp"
         android:layout_marginBottom="609dp"
         android:text="1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txt_cod5"
+        app:layout_constraintEnd_toStartOf="@+id/txt_cod2"
+        app:layout_constraintStart_toEndOf="@+id/txt_cod6"
         app:layout_constraintTop_toBottomOf="@+id/txt_realizado" />
 
     <TextView
         android:id="@+id/txt_cod5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="123dp"
-        android:layout_marginBottom="608dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginBottom="609dp"
         android:text="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_cod2"
         app:layout_constraintTop_toBottomOf="@+id/txt_realizado" />
 
     <TextView
@@ -108,27 +104,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="609dp"
         android:text="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/txt_cod4"
+        app:layout_constraintStart_toEndOf="@+id/txt_cod3"
         app:layout_constraintTop_toBottomOf="@+id/txt_realizado" />
 
     <Button
         android:id="@+id/btn_testando"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="59dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="264dp"
-        android:layout_marginBottom="406dp"
-        android:text="Button"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:onClick="exibir"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.921" />
+        app:layout_constraintVertical_bias="0.529" />
 </androidx.constraintlayout.widget.ConstraintLayout>
