@@ -1,13 +1,17 @@
 package com.example.ordernow.Activitys;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 
+import com.example.ordernow.Adapters.RecyclerAdapter2;
+import com.example.ordernow.Adapters.Restaurants;
 import com.example.ordernow.Carrinho.Carrinho;
 import com.example.ordernow.Database.Database;
 import com.example.ordernow.Usuarios.Validar;
@@ -17,7 +21,11 @@ import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -28,7 +36,17 @@ import android.widget.ViewFlipper;
 
 import com.example.ordernow.QrCode.ScanCodeActivity;
 import com.example.ordernow.R;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,6 +56,18 @@ public class MainActivity extends AppCompatActivity {
     Typeface tf1, tf2, tf3;
     Button btn_carrinho;
 
+
+
+    private DatabaseReference reference;
+    private StorageReference mStorageRef;
+
+    public static Restaurants currentrest;
+    private Context mContext = MainActivity.this;
+
+    private RecyclerView recyclerView2;
+
+    private ArrayList<Restaurants> restList;
+    private RecyclerAdapter2 recyclerAdapter2;
 
     private int CAMERA_PERMISSION_CODE = 1;
 
@@ -49,14 +79,18 @@ public class MainActivity extends AppCompatActivity {
     Button logout;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+
+
         int image[] = {R.drawable.foratras, R.drawable.habibs, R.drawable.hamburguer};
+
+
 
 
         v_flipper = findViewById(R.id.v_flipper);
@@ -65,9 +99,24 @@ public class MainActivity extends AppCompatActivity {
         btn_carrinho = findViewById(R.id.btn_carrinho);
 
 
+
         tf1 = Typeface.createFromAsset(getAssets(), "Lena.ttf");
         tf2 = Typeface.createFromAsset(getAssets(), "pala.ttf");
         tf3 = Typeface.createFromAsset(getAssets(), "Scaramella-Regular.otf");
+
+        recyclerView2 = (RecyclerView) findViewById(R.id.recyclerView2);
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView2.setLayoutManager(layoutManager);
+        recyclerView2.setHasFixedSize(true);
+
+        reference = FirebaseDatabase.getInstance().getReference();
+
+        mStorageRef = FirebaseStorage.getInstance().getReference();
+
+        restList = new ArrayList<>();
+
+        init();
 
 
         for (int images: image){
@@ -89,7 +138,6 @@ public class MainActivity extends AppCompatActivity {
 
         saldo = findViewById(R.id.tv_saldo);
         saldo.setText("R$ " + Validar.saldo);
-
 
 
             FloatingActionButton btn_scan = findViewById(R.id.btn_scan);
@@ -123,9 +171,72 @@ public class MainActivity extends AppCompatActivity {
                     finish();
                 }
             }); */
+
+
+
+
+
+    }
+
+
+
+    private void init(){
+
+        clearAll();
+
+        Query query = reference.child("Restaurants");
+
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
+
+                        currentrest = dataSnapshot.getValue(Restaurants.class);
+
+                        Restaurants restaurants = new Restaurants();
+
+                        restaurants.setImgrest(snapshot.child("imgrest").getValue().toString());
+                        restaurants.setEspecialidade(snapshot.child("especialidade").getValue().toString());
+                        restaurants.setNomer(snapshot.child("nomer").getValue().toString());
+                        restaurants.setNota(snapshot.child("nota").getValue().toString());
+
+                        restList.add(restaurants);
+                    }
+
+                recyclerAdapter2 = new RecyclerAdapter2(mContext, restList);
+                recyclerView2.setAdapter(recyclerAdapter2);
+                recyclerAdapter2.notifyDataSetChanged();
+                }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+    }
+
+    private void clearAll(){
+
+        if(restList != null){
+
+            restList.clear();
+
+            if(recyclerAdapter2 != null){
+
+                recyclerAdapter2.notifyDataSetChanged();
+
+            }
+
         }
 
-        public void flipperImages(int image){
+        restList = new ArrayList<>();
+
+    }
+
+    public void flipperImages(int image){
             ImageView imageView = new ImageView(this);
             imageView.setBackgroundResource(image);
 

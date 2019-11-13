@@ -20,8 +20,8 @@ public class CartaoActivity extends AppCompatActivity {
 
     Button btn_pay;
     EditText card_number, validade_card, cvv_card, nome_card, cpf_user;
-    ImageView cartao_image;
-    TextView titulo_activity;
+    ImageView perf_cartao;
+    TextView titulo_activity, name_cartao, welcome_cartao;
 
 
 
@@ -36,7 +36,9 @@ public class CartaoActivity extends AppCompatActivity {
         cvv_card = findViewById(R.id.cvv_card);
         nome_card = findViewById(R.id.nome_card);
         cpf_user = findViewById(R.id.cpf_user);
-        cartao_image = findViewById(R.id.cartao_image);
+        perf_cartao = findViewById(R.id.perf_cartao);
+        name_cartao = findViewById(R.id.name_cartao);
+        welcome_cartao = findViewById(R.id.welcome_cartao);
         titulo_activity = findViewById(R.id.titulo_activity);
 
         btn_pay.setOnClickListener(new View.OnClickListener() {
