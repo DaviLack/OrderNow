@@ -100,23 +100,7 @@ public class Cardapio extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
 
-                    if(snapshot.child("QrMenu").getValue().toString().equals(QrMenu)) {
-
-                        currentFood = dataSnapshot.getValue(Images.class);
-
-                        Images images = new Images();
-
-                        images.setUrl(snapshot.child("url").getValue().toString());
-                        images.setDescription(snapshot.child("description").getValue().toString());
-                        images.setNome(snapshot.child("nome").getValue().toString());
-                        images.setPreco(snapshot.child("preco").getValue().toString());
-
-                        imageList.add(images);
-                    }
-
-                }
 
                 recyclerAdapter = new RecyclerAdapter(mContext, imageList);
                 recyclerView.setAdapter(recyclerAdapter);
@@ -153,7 +137,7 @@ public class Cardapio extends AppCompatActivity {
     }
 
     public void onBackPressed() {
-        // super.onBackPressed();
+        super.onBackPressed();
         startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }
 

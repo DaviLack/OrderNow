@@ -82,8 +82,6 @@ public class FragmentContact extends Fragment {
 
         return v;
 
-
-
     }
 
     private void init() {
@@ -98,7 +96,7 @@ public class FragmentContact extends Fragment {
 
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
 
-                    if(snapshot.child("QrMenu").getValue().toString().equals(QrMenu)) {
+                    if(snapshot.child("QrMenu").getValue().toString().equals(QrMenu) && snapshot.child("categoria").getValue().toString().equals("2")) {
 
                         Images images = new Images();
 
