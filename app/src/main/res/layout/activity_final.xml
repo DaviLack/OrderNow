@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".Activitys.FinalActivity">
 
+
+    <ImageView
+        android:id="@+id/fundo_final"
+        android:layout_width="1010dp"
+        android:layout_height="1341dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/perfil" />
     <TextView
         android:id="@+id/txt_realizado"
         android:layout_width="wrap_content"
@@ -123,7 +133,7 @@
         app:layout_constraintVertical_bias="0.896" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/waiter_fundo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="173dp"
@@ -139,19 +149,18 @@
         app:srcCompat="@drawable/waiter" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="410dp"
-        android:layout_height="71dp"
+        android:id="@+id/logo_final"
+        android:layout_width="412dp"
+        android:layout_height="45dp"
         android:layout_marginEnd="2dp"
-        android:layout_marginBottom="46dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_escrita" />
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/Ani_success"
+        android:id="@+id/Ani_success2"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_alignParentStart="true"
@@ -172,4 +181,6 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/success" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,7 +27,7 @@
             <ViewFlipper
                 android:id="@+id/v_flipper"
                 android:layout_width="match_parent"
-                android:layout_height="550px">
+                android:layout_height="194dp">
 
 
             </ViewFlipper>
@@ -47,22 +47,22 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="200px"
+            android:layout_height="58dp"
             android:background="#E6DFDF"
             android:orientation="vertical">
 
 
             <TextView
                 android:id="@+id/tv_carteira"
-                android:layout_width="125dp"
-                android:layout_height="wrap_content"
+                android:layout_width="131dp"
+                android:layout_height="21dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="9dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="26dp"
-                android:layout_marginBottom="29dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginBottom="17dp"
                 android:text="Saldo Disponivel"
                 android:textColor="#000"
                 android:textSize="16sp"

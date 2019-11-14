@@ -21,7 +21,7 @@ import java.util.TimerTask;
 public class FinalActivity extends AppCompatActivity {
 
     public TextView txt_realizado, txt_pedido, txt_cod, txt_cod2, txt_cod3, txt_cod4, txt_cod5, txt_cod6;
-           ImageView img_final, back_final;
+           ImageView fundo_final, waiter_fundo, logo_final;
 
 
     @Override
@@ -32,6 +32,9 @@ public class FinalActivity extends AppCompatActivity {
 
         txt_realizado = findViewById(R.id.txt_realizado);
         txt_pedido = findViewById(R.id.txt_pedido);
+        fundo_final = findViewById(R.id.fundo_final);
+        waiter_fundo = findViewById(R.id.waiter_fundo);
+        logo_final = findViewById(R.id.logo_final);
         // txt_cod = findViewById(R.id.txt_cod);
         //txt_cod2 = findViewById(R.id.txt_cod2);
        // txt_cod3 = findViewById(R.id.txt_cod3);
