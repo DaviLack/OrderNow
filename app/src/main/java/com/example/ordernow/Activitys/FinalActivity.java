@@ -2,8 +2,10 @@ package com.example.ordernow.Activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ordernow.R;
@@ -13,13 +15,13 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class FinalActivity extends AppCompatActivity {
 
     public TextView txt_realizado, txt_pedido, txt_cod, txt_cod2, txt_cod3, txt_cod4, txt_cod5, txt_cod6;
-
-
-
+           ImageView img_final, back_final;
 
 
     @Override

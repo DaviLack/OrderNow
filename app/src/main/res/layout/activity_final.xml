@@ -9,107 +9,101 @@
     <TextView
         android:id="@+id/txt_realizado"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="24dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Pedido Realizado com sucesso!"
+        android:text="Pedido Confirmado"
         android:textColor="#000"
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.073" />
+        app:layout_constraintVertical_bias="0.237" />
 
     <TextView
         android:id="@+id/txt_pedido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginBottom="608dp"
+        android:layout_width="408dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="Código do pedido"
+        android:textAlignment="center"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_realizado" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746" />
 
     <TextView
         android:id="@+id/txt_cod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginBottom="609dp"
+        android:layout_width="8dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="184dp"
         android:text="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txt_cod3"
-        app:layout_constraintStart_toEndOf="@+id/txt_pedido"
-        app:layout_constraintTop_toBottomOf="@+id/txt_realizado" />
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pedido" />
 
     <TextView
         android:id="@+id/txt_cod2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:layout_marginBottom="609dp"
+        android:layout_width="8dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="164dp"
         android:text="1"
+        android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/txt_cod5"
         app:layout_constraintStart_toEndOf="@+id/txt_cod4"
-        app:layout_constraintTop_toBottomOf="@+id/txt_realizado" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_pedido" />
 
     <TextView
         android:id="@+id/txt_cod3"
-        android:layout_width="wrap_content"
+        android:layout_width="8dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:layout_marginBottom="609dp"
         android:text="1"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#000"
         app:layout_constraintEnd_toStartOf="@+id/txt_cod6"
         app:layout_constraintStart_toEndOf="@+id/txt_cod"
-        app:layout_constraintTop_toBottomOf="@+id/txt_realizado" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_pedido" />
 
     <TextView
         android:id="@+id/txt_cod4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:layout_marginBottom="609dp"
         android:text="1"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#000"
         app:layout_constraintEnd_toStartOf="@+id/txt_cod2"
         app:layout_constraintStart_toEndOf="@+id/txt_cod6"
-        app:layout_constraintTop_toBottomOf="@+id/txt_realizado" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_pedido" />
 
     <TextView
         android:id="@+id/txt_cod5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
         android:layout_marginEnd="131dp"
-        android:layout_marginBottom="609dp"
+        android:textColor="#000"
         android:text="1"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txt_cod2"
-        app:layout_constraintTop_toBottomOf="@+id/txt_realizado" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_pedido" />
 
     <TextView
         android:id="@+id/txt_cod6"
-        android:layout_width="wrap_content"
+        android:layout_width="8dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:layout_marginBottom="609dp"
+        android:textColor="#000"
         android:text="1"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/txt_cod4"
         app:layout_constraintStart_toEndOf="@+id/txt_cod3"
-        app:layout_constraintTop_toBottomOf="@+id/txt_realizado" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_pedido" />
 
     <Button
         android:id="@+id/btn_testando"
@@ -126,5 +120,56 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintVertical_bias="0.896" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_realizado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/waiter" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="410dp"
+        android:layout_height="71dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="46dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_escrita" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/Ani_success"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/success" />
 </androidx.constraintlayout.widget.ConstraintLayout>
