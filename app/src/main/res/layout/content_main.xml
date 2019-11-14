@@ -70,8 +70,8 @@
 
             <TextView
                 android:id="@+id/tv_saldo"
-                android:layout_width="27dp"
-                android:layout_height="22dp"
+                android:layout_width="49dp"
+                android:layout_height="21dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="118dp"
@@ -130,7 +130,7 @@
                     android:text="Recomendações"
                     android:textColor="#000"
                     android:textSize="19dp"
-                    android:textStyle="bold" />
+                    />
 
 
             </androidx.cardview.widget.CardView>

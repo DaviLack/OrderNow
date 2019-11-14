@@ -2,8 +2,10 @@ package com.example.ordernow.Activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,9 +14,11 @@ import com.example.ordernow.Usuarios.Validar;
 
 public class Carteira extends AppCompatActivity {
 
-    ImageView fundo_wallet, back_wallet, img_mais, perf_carteira;
+    ImageView fundo_wallet, img_mais, perf_carteira;
+    ImageButton back_wallet;
     TextView txt_cartao, txt_linha, txt_historico, txt_dispo, txt_dinheiro_carteira, txt_carteira, welcome_carteira, name_carteira ;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
