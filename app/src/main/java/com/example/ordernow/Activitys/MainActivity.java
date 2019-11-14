@@ -51,10 +51,11 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ViewFlipper v_flipper;
-    TextView tv_carteira;
+    TextView tv_carteira, recomendacao_main;
     TextView saldo;
     Typeface tf1, tf2, tf3;
     Button btn_carrinho;
+    ImageButton wallet_principal;
 
 
 
@@ -88,13 +89,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        int image[] = {R.drawable.foratras, R.drawable.habibs, R.drawable.hamburguer};
+        int image[] = {R.drawable.slider_bk, R.drawable.slider_kfc, R.drawable.slider_mc, R.drawable.slider_ob, R.drawable.slider_ph};
 
 
 
 
         v_flipper = findViewById(R.id.v_flipper);
+        wallet_principal = findViewById(R.id.wallet_principal);
         tv_carteira = findViewById(R.id.tv_carteira);
+        recomendacao_main = findViewById(R.id.recomendacao_main);
         saldo = findViewById(R.id.tv_saldo);
         btn_carrinho = findViewById(R.id.btn_carrinho);
 
