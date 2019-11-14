@@ -1,19 +1,28 @@
 package com.example.ordernow.Carrinho;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.ordernow.Activitys.FinalActivity;
 import com.example.ordernow.Activitys.Payment;
+import com.example.ordernow.Activitys.ProfileActivity;
 import com.example.ordernow.Adapters.CartAdapter;
 import com.example.ordernow.Database.Database;
 import com.example.ordernow.R;
+import com.example.ordernow.Usuarios.Validar;
+import com.google.android.gms.common.internal.service.Common;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -28,16 +37,16 @@ public class Carrinho extends AppCompatActivity {
     RecyclerView.LayoutManager layoutManager;
 
     FirebaseDatabase database;
-    DatabaseReference request;
+    public static DatabaseReference requests;
 
-    TextView txtTotalPrice;
+    public static TextView txtTotalPrice;
     Button btnPlace;
 
+    public static List<Order> cart = new ArrayList<>();
 
     CartAdapter adapter;
 
     public static int total = 0;
-    public static List<Order> cart = new ArrayList<>();
 
 
     @Override
@@ -47,7 +56,7 @@ public class Carrinho extends AppCompatActivity {
 
 
         database = FirebaseDatabase.getInstance();
-        request = database.getReference("Requests");
+        requests = database.getReference("Requests");
 
         recyclerView = (RecyclerView)findViewById(R.id.listCart);
         recyclerView.setHasFixedSize(true);
@@ -63,20 +72,22 @@ public class Carrinho extends AppCompatActivity {
         btnPlace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Carrinho.this, Payment.class));
+
+                startActivity(new Intent(getApplicationContext(), Payment.class));
+
             }
         });
 
     }
+
 
     private void loadListFood() {
         cart = new Database(this).getCarts();
         adapter = new CartAdapter(cart, this);
         recyclerView.setAdapter(adapter);
 
-
+        total = 0;
         for(Order order:cart)
-
             total +=(Integer.parseInt(order.getPrice()))*(Integer.parseInt(order.getQuantity()));
             Locale locale = new Locale("pt", "BR");
             NumberFormat fmt = NumberFormat.getCurrencyInstance(locale);

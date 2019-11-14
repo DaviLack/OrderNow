@@ -58,10 +58,10 @@
         android:layout_height="20dp"
         android:layout_marginStart="6dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="592dp"
+        android:layout_marginBottom="572dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_clicar"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toEndOf="@+id/textao_separar2"
         app:srcCompat="@drawable/arrow" />
 
@@ -72,7 +72,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:background="#66000000"
+        android:background="@color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -133,10 +133,10 @@
         android:layout_height="20dp"
         android:layout_marginStart="6dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="528dp"
+        android:layout_marginBottom="512dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_clicar2"
-        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textao_separar"
         app:srcCompat="@drawable/arrow" />
 
@@ -147,7 +147,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:background="#66000000"
+        android:background="@color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.714"

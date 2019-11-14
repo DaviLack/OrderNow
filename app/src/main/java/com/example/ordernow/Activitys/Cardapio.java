@@ -2,6 +2,7 @@ package com.example.ordernow.Activitys;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,10 +14,12 @@ import android.os.storage.StorageManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.ordernow.R;
+import com.example.ordernow.Usuarios.Validar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,6 +28,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -56,6 +60,17 @@ public class Cardapio extends AppCompatActivity {
         setContentView(R.layout.activity_cardapio);
 
         Log.d(TAG, "onCreate: started");
+
+        ImageView profile_image = findViewById(R.id.profile_image);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        Picasso.get().load(Validar.profile_image).into(profile_image);
+
+
+        TextView ToolbarUser = findViewById(R.id.ToolbarUser);
+        ToolbarUser.setText(Validar.ToolbarUser);
 
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);

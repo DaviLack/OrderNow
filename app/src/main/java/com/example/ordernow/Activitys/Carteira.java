@@ -38,6 +38,7 @@ public class Carteira extends AppCompatActivity {
         txt_carteira = findViewById(R.id.txt_carteira);
 
         name_carteira.setText(Validar.ToolbarUser);
+        txt_dinheiro_carteira.setText("R$ " + Validar.saldo);
 
     }
 }
