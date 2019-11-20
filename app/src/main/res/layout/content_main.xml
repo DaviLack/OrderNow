@@ -70,14 +70,14 @@
 
             <TextView
                 android:id="@+id/tv_saldo"
-                android:layout_width="49dp"
-                android:layout_height="21dp"
+                android:layout_width="86dp"
+                android:layout_height="34dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="118dp"
+                android:layout_marginStart="136dp"
                 android:layout_marginLeft="260dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="21dp"
+                android:layout_marginBottom="8dp"
                 android:layout_toEndOf="@+id/tv_carteira"
                 android:textSize="17sp"
                 android:textStyle="bold" />
