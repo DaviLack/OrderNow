@@ -25,7 +25,6 @@ public class Carteira extends AppCompatActivity {
         setContentView(R.layout.activity_carteira);
 
         fundo_wallet = findViewById(R.id.fundo_wallet);
-        back_wallet = findViewById(R.id.back_wallet);
         img_mais = findViewById(R.id.img_mais);
         perf_carteira = findViewById(R.id.perf_carteira);
         welcome_carteira = findViewById(R.id.welcome_carteira);

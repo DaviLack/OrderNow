@@ -27,7 +27,6 @@ TextView dados_pessoais, nome_mostrar,Email_mostrar,cpf_mostrar,telefone_mostrar
         setContentView(R.layout.activity_mostrar_profile);
 
         img_fundo_mostrar = findViewById(R.id.img_fundo_mostrar);
-        back_mostrar = findViewById(R.id.back_mostrar);
         nome_mostrar = findViewById(R.id.nome_mostrar);
         name_mostrar = findViewById(R.id.name_mostrar);
         welcome_mostrar = findViewById(R.id.welcome_mostrar);

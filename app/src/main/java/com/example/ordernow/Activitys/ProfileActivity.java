@@ -47,7 +47,6 @@ public class ProfileActivity extends AppCompatActivity {
         botao_clicar = findViewById(R.id.botao_clicar);
         botao_clicar2 = findViewById(R.id.botao_clicar2);
         botao_clicar3 = findViewById(R.id.botao_clicar3);
-        back_profile = findViewById(R.id.back_profile);
 
         text_nome.setText(Validar.ToolbarUser);
 
