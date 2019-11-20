@@ -67,10 +67,7 @@ public class FragmentCall extends Fragment {
 
         imageList = new ArrayList<>();
 
-        RecyclerAdapter recyclerAdapter = new RecyclerAdapter(getContext(), imageList);
-        recyclerView1.setAdapter(recyclerAdapter);
 
-        recyclerAdapter.notifyDataSetChanged();
 
 
         init();
@@ -117,7 +114,10 @@ public class FragmentCall extends Fragment {
 
                 }
 
+                RecyclerAdapter recyclerAdapter = new RecyclerAdapter(getContext(), imageList);
+                recyclerView1.setAdapter(recyclerAdapter);
 
+                recyclerAdapter.notifyDataSetChanged();
 
 
             }
