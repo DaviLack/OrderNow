@@ -25,7 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Payment extends AppCompatActivity {
 
-    ImageView payment_image, payment_image2, imagem_seta, imagem_seta2;
+    ImageView payment_image, payment_image2, imagem_seta, imagem_seta2, payment_metod, img_fundo_mostrar1;
     TextView textao_separar, text_payment, textao_separar2, text_payment2, payment_text;
     Button btn_clicar, btn_clicar2;
 
@@ -35,6 +35,9 @@ public class Payment extends AppCompatActivity {
         setContentView(R.layout.activity_payment);
 
         btn_clicar = findViewById(R.id.btn_clicar);
+        text_payment2 = findViewById(R.id.text_payment2);
+        payment_metod = findViewById(R.id.payment_metod);
+        img_fundo_mostrar1 = findViewById(R.id.img_fundo_mostrar1);
         btn_clicar2 = findViewById(R.id.btn_clicar2);
         payment_image = findViewById(R.id.payment_image);
         payment_image2 = findViewById(R.id.payment_image2);
@@ -75,7 +78,7 @@ public class Payment extends AppCompatActivity {
         alertDialog.setView(edtMesa);
         alertDialog.setIcon(R.drawable.cart);
 
-        alertDialog.setPositiveButton("SIM", new DialogInterface.OnClickListener() {
+        alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Request request = new Request(
@@ -94,13 +97,13 @@ public class Payment extends AppCompatActivity {
                 Carrinho.requests.child(String.valueOf(System.currentTimeMillis()))
                         .setValue(request);
                 new Database(getBaseContext()).cleanCart();
-                Toast.makeText(Payment.this, "Obrigado", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getApplicationContext(), Teste.class));
+                Toast.makeText(Payment.this, "Aguarde seu pedido ficar pronto", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), FinalActivity.class));
                 finish();
             }
         });
 
-        alertDialog.setNegativeButton("NÃO", new DialogInterface.OnClickListener() {
+        alertDialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
@@ -109,4 +112,5 @@ public class Payment extends AppCompatActivity {
 
         alertDialog.show();
     }
+
 }

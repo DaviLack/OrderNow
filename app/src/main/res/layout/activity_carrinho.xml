@@ -48,7 +48,7 @@
                     android:id="@+id/total"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="215dp"
+                    android:layout_marginLeft="205dp"
                     android:text="10000"
                     android:textColor="#000"
                     android:textSize="24sp" />

@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,6 +31,11 @@ public class FinalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final);
 
+        Window window = this.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.setStatusBarColor(this.getResources().getColor(R.color.colorRegistro));
+
 
         txt_realizado = findViewById(R.id.txt_realizado);
         txt_pedido = findViewById(R.id.txt_pedido);
@@ -42,9 +49,6 @@ public class FinalActivity extends AppCompatActivity {
         //txt_cod5 = findViewById(R.id.txt_cod5);
        // txt_cod6 = findViewById(R.id.txt_cod6);
 
-    }
-
-    public void exibir(View view){
         Random rand = new Random();
         int number = rand.nextInt(6)+1;
         int number2 = rand.nextInt(2)+3;
@@ -73,13 +77,7 @@ public class FinalActivity extends AppCompatActivity {
         mytext6.setText(myString6);
 
 
-
-
     }
-
-
-
-
 
 
 

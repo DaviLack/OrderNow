@@ -27,6 +27,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -85,6 +87,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Window window = this.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.setStatusBarColor(this.getResources().getColor(R.color.colorRegistro));
 
 
 
@@ -98,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
         wallet_principal = findViewById(R.id.wallet_principal);
         tv_carteira = findViewById(R.id.tv_carteira);
         recomendacao_main = findViewById(R.id.recomendacao_main);
-        saldo = findViewById(R.id.tv_saldo);
         btn_carrinho = findViewById(R.id.btn_carrinho);
 
 

@@ -6,6 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".Activitys.Payment">
 
+    <RelativeLayout
+        android:id="@+id/fundo_mostar"
+        android:layout_width="408dp"
+        android:layout_height="185dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_fundo_mostrar1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/teste2"/>
+
+        <ImageView
+            android:id="@+id/payment_metod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/img_fundo_mostrar1"
+            android:layout_alignTop="@+id/img_fundo_mostrar1"
+            android:layout_alignEnd="@+id/img_fundo_mostrar1"
+            android:layout_alignBottom="@+id/img_fundo_mostrar1"
+            android:layout_marginStart="168dp"
+            android:layout_marginTop="54dp"
+            android:layout_marginEnd="176dp"
+            android:layout_marginBottom="67dp"
+            app:srcCompat="@drawable/payment_method" />
+
+
+    </RelativeLayout>
+
     <ImageView
         android:id="@+id/payment_image"
         android:layout_width="35dp"
@@ -19,7 +53,7 @@
         app:layout_constraintHorizontal_bias="0.022"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.156"
+        app:layout_constraintVertical_bias="0.344"
         app:srcCompat="@drawable/credit_card_payment" />
 
     <TextView
@@ -35,7 +69,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.188" />
+        app:layout_constraintVertical_bias="0.376" />
+
 
     <TextView
         android:id="@+id/text_payment"
@@ -58,10 +93,10 @@
         android:layout_height="20dp"
         android:layout_marginStart="6dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="572dp"
+        android:layout_marginBottom="440dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_clicar"
-        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textao_separar2"
         app:srcCompat="@drawable/arrow" />
 
@@ -75,10 +110,10 @@
         android:background="@color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.149" />
+        app:layout_constraintVertical_bias="0.345" />
 
     <ImageView
         android:id="@+id/payment_image2"
@@ -93,7 +128,7 @@
         app:layout_constraintHorizontal_bias="0.022"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.243"
+        app:layout_constraintVertical_bias="0.433"
         app:srcCompat="@drawable/wallet_money" />
 
     <TextView
@@ -106,10 +141,10 @@
         android:text="_________________________________________________________"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.273" />
+        app:layout_constraintVertical_bias="0.458" />
 
     <TextView
         android:id="@+id/text_payment2"
@@ -117,7 +152,7 @@
         android:layout_height="26dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="8dp"
         android:text="Minha Carteira"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -133,10 +168,10 @@
         android:layout_height="20dp"
         android:layout_marginStart="6dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="512dp"
+        android:layout_marginBottom="384dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_clicar2"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.812"
         app:layout_constraintStart_toEndOf="@+id/textao_separar"
         app:srcCompat="@drawable/arrow" />
 
@@ -150,10 +185,10 @@
         android:background="@color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.238" />
+        app:layout_constraintVertical_bias="0.425" />
 
     <TextView
         android:id="@+id/payment_text"
@@ -164,14 +199,15 @@
         android:layout_marginEnd="118dp"
         android:layout_marginBottom="52dp"
         android:text="Forma de Pagamento"
+        android:textColor="#000"
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_clicar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.746" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

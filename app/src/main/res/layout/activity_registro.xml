@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#fff"
+    android:orientation="vertical"
     tools:context=".Usuarios.Registro">
 
     <ImageView
@@ -110,8 +110,8 @@
         android:background="@drawable/email_design"
         android:ems="10"
         android:hint="Nome de usuário"
-        android:textSize="20sp"
         android:paddingStart="10dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/etPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.31"
@@ -139,8 +139,8 @@
 
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/Editcell"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
+        android:layout_width="206dp"
+        android:layout_height="47dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="23dp"
         android:layout_marginEnd="55dp"
@@ -152,27 +152,30 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/Editddd"
         app:layout_constraintTop_toBottomOf="@+id/etEmail"
         app:layout_constraintVertical_bias="0.0" />
 
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/Editddd"
-        android:layout_width="59dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="266dp"
+        android:layout_width="46dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/email_design"
         android:ems="10"
         android:hint="DDD"
         android:paddingStart="10dp"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Editcell"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.656" />
 
     <ImageView
         android:id="@+id/OrderNowLogo"
@@ -184,7 +187,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ordernowlogo"/>
+        app:srcCompat="@drawable/ordernowlogo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
