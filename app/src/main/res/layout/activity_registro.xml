@@ -52,10 +52,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.544"
+        app:layout_constraintVertical_bias="0.545"
         tools:ignore="RtlSymmetry" />
 
     <com.rengwuxian.materialedittext.MaterialEditText
@@ -74,10 +74,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.465"
+        app:layout_constraintVertical_bias="0.453"
         tools:ignore="RtlSymmetry" />
 
     <Button
@@ -112,12 +112,12 @@
         android:hint="Nome de usuário"
         android:paddingStart="10dp"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/etPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.939" />
+        app:layout_constraintVertical_bias="0.361" />
 
     <TextView
         android:id="@+id/termos"
@@ -141,8 +141,8 @@
         android:id="@+id/Editcell"
         android:layout_width="206dp"
         android:layout_height="47dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="55dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/email_design"
@@ -152,15 +152,15 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Editddd"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.802"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.624" />
 
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/Editddd"
-        android:layout_width="46dp"
-        android:layout_height="51dp"
+        android:layout_width="44dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -172,10 +172,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintHorizontal_bias="0.199"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.656" />
+        app:layout_constraintVertical_bias="0.622" />
 
     <ImageView
         android:id="@+id/OrderNowLogo"

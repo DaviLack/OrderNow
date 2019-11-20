@@ -112,8 +112,8 @@
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recyclerView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="379dp"
+                        android:layout_width="359dp"
+                        android:layout_height="372dp"
                         android:background="@drawable/list_design">
 
 
@@ -127,7 +127,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_marginTop="12dp"
-                    android:text="Histórico"
+                    android:text="Suportados"
                     android:textColor="#000"
                     android:textSize="19dp"
                     />
