@@ -24,20 +24,6 @@
             android:layout_height="match_parent"
             app:srcCompat="@drawable/teste2"/>
 
-        <ImageButton
-            android:id="@+id/back_mostrar"
-            android:layout_width="wrap_content"
-            android:layout_height="29dp"
-            android:layout_alignStart="@+id/imageView2"
-            android:layout_alignTop="@+id/imageView2"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="370dp"
-            android:layout_marginBottom="148dp"
-            app:srcCompat="@drawable/back_arrow" />
-
         <ImageView
             android:id="@+id/perf_mostrar"
             android:layout_width="120dp"

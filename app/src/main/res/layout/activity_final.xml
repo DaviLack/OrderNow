@@ -97,10 +97,13 @@
         android:id="@+id/txt_cod5"
         android:layout_width="9dp"
         android:layout_height="19dp"
+        android:layout_marginStart="525dp"
         android:layout_marginEnd="176dp"
         android:text="1"
         android:textColor="#000"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/fundo_final"
         app:layout_constraintTop_toTopOf="@+id/txt_cod6" />
 
     <TextView
@@ -131,11 +134,11 @@
 
     <ImageView
         android:id="@+id/logo_final"
-        android:layout_width="412dp"
-        android:layout_height="45dp"
+        android:layout_width="417dp"
+        android:layout_height="51dp"
         android:layout_marginEnd="2dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_escrita" />

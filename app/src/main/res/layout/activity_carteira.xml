@@ -25,20 +25,6 @@
             android:layout_height="match_parent"
             app:srcCompat="@drawable/teste2" />
 
-        <ImageButton
-            android:id="@+id/back_wallet"
-            android:layout_width="32dp"
-            android:layout_height="29dp"
-            android:layout_alignStart="@+id/imageView2"
-            android:layout_alignTop="@+id/imageView2"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="369dp"
-            android:layout_marginBottom="146dp"
-            app:srcCompat="@drawable/back_arrow" />
-
         <TextView
             android:id="@+id/name_carteira"
             android:layout_width="wrap_content"

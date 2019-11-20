@@ -18,7 +18,7 @@ public class Welcome extends AppCompatActivity {
 
 
     TextView username;
-    TextView txt_ola, txt_bem;
+    TextView txt_ola, txt_bem, txt_name;
     Typeface tf1, tf2, tf3;
 
 
@@ -41,6 +41,7 @@ public class Welcome extends AppCompatActivity {
 
         txt_bem = findViewById(R.id.txt_bem);
         txt_ola = findViewById(R.id.txt_ola);
+        txt_name = findViewById(R.id.txt_name);
 
         username = findViewById(R.id.txt_name);
         username.setText(Validar.ToolbarUser);
